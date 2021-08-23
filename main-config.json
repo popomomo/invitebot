@@ -1,8 +1,8 @@
 {
-   "DiscordToken":"",
+   "DiscordToken":"ODUyODQ1ODI5MDM0NDc1NTQw.YMMwkg.SGyQnRWmY7APkq21lnl8dSRLdfg",
    "Prefix":"i!",
    "LogFile": "log.txt",
-   "OwnerUsers": [],
+   "OwnerUsers": [122756829964009472],
    "DeleteOwnerCommandsInvos": 0,
    "MaxSavedConfigs": 10
 }

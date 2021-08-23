@@ -1,0 +1,4 @@
+[2021-08-23 15:26:04.232128] [INTERNAL]: InviteBot started
+[2021-08-23 15:26:04.309494] [INTERNAL]: Cogs named: errors invs other owner  were loaded
+[2021-08-23 15:26:04.309674] [INTERNAL]: Status service started
+[2021-08-23 15:26:04.309791] [INTERNAL]: InviteBot ready

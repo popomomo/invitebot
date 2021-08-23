@@ -1,3 +1,4 @@
+from keep_alive import keep_alive
 import discord
 import os
 from discord.ext import commands
@@ -8,6 +9,8 @@ import traceback
 import sys
 intents = discord.Intents.default()
 intents.members = True
+
+keep_alive()
 
 with open('main-config.json', 'r') as f:
     config = json.load(f)

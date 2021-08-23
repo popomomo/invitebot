@@ -1,0 +1,41 @@
+{
+    "General": {
+        "DeleteInvocations": 0,
+        "AdminRoles": [],
+        "ServerLog": 0,
+        "Prefix": "i!",
+        "WelcomeMessage": "None"
+    },
+    "Invites": {
+        "H6h2TmU": {
+            "name": "None",
+            "roles": [
+                755837992429551857
+            ],
+            "uses": 3,
+            "welcome": "None"
+        },
+        "UsfHjD9": {
+            "name": "Dream Team",
+            "roles": [
+                409357943318773760
+            ],
+            "uses": 154,
+            "welcome": "None"
+        },
+        "Wz8nC7H": {
+            "name": "None",
+            "roles": [],
+            "uses": 1,
+            "welcome": "None"
+        },
+        "fhn3Qz4": {
+            "name": "Space Pilot",
+            "roles": [
+                261527584414760980
+            ],
+            "uses": 52,
+            "welcome": "\u0e22\u0e34\u0e19\u0e14\u0e35\u0e15\u0e49\u0e2d\u0e19\u0e23\u0e31\u0e1a\u0e40\u0e02\u0e49\u0e32\u0e2a\u0e39\u0e48 JJGM \u0e04\u0e23\u0e31\u0e1a"
+        }
+    }
+}
