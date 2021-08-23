@@ -15,7 +15,7 @@ keep_alive()
 with open('main-config.json', 'r') as f:
     config = json.load(f)
     prefix = config['Prefix']
-    token = config['DiscordToken']
+    token = os.environ['DiscordToken']
     logfile = config['LogFile']
     delinvos = config['DeleteOwnerCommandsInvos']
 
