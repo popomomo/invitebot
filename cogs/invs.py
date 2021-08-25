@@ -59,7 +59,9 @@ class Invs(commands.Cog):
             if invites['Invites'][f"{invite}"]["roles"] == []:
                 return
         except KeyError:
-                await self.log(member.guild.id, f"There was this wild log here with a misdone configuration I have no mind for rn. Details:\nInvite Code: {invite}, Guild: {member.guild.id}, Member: {member}")
+                # its the cool 1-inv escp, but we dont get member here due to sth, has to be fixed in the parent func
+                # NoneType gets thrown here || await self.log(member.guild.id, f"There was this wild log here with a misdone configuration I have no mind for rn. Details:\nInvite Code: {invite}, Guild: {member.guild.id}, Member: {member}")
+                await self.log('0', f"There was this wild log here with a misdone configuration I have no mind for rn. Details:\nInvite Code: {invite}, Guild: '0', Member: {member}")
                 return
 
 
@@ -202,7 +204,7 @@ class Invs(commands.Cog):
 
         #await self.errorLog()
 
-    @commands.command(aliases = ['invdel', 'invrem', 'invr'])
+    @commands.command(aliases = ['invrem', 'invr'])
     async def remove(self, ctx, invite: discord.Invite, role: discord.Role = "None"):
         if self.checkInvos(ctx.guild.id) == 1:
             await ctx.message.delete(delay=3)
@@ -337,6 +339,10 @@ class Invs(commands.Cog):
         with open(f'configs/{ctx.guild.id}.json', 'r') as f:
             invites = json.load(f)
 
+        if len(invites['Invites']) == 0:
+            await ctx.send("You have no invites")
+            return
+
         no_fields = 0
 
         embed = discord.Embed(title = f"**Invite List**", color = discord.Colour.from_rgb(119, 137, 218))
@@ -382,7 +388,12 @@ class Invs(commands.Cog):
         with open(f'configs/{ctx.guild.id}.json', 'r') as f:
             invites = json.load(f)
 
-        invite = await channel.create_invite(max_age = age, max_uses = uses)
+        try:
+            invite = await channel.create_invite(max_age = age, max_uses = uses)
+        except discord.HTTPException as msg_ex:
+            if msg_ex.code == 50013 and msg_ex.status == 403:
+                await ctx.send("Bot is missing permissions to create an invite.\n[https://docs.invitebot.xyz/error-helpers/#bot-is-missing-permissions-to-create-an-invite]")
+                return
 
         invites['Invites'][f"{invite.code}"] = {}
         invites['Invites'][f"{invite.code}"]['name'] = name
@@ -428,6 +439,32 @@ class Invs(commands.Cog):
             await ctx.send("Invite you are trying to use is invalid or expired")
 
         #await self.errorLog()
+
+    @commands.command(aliases = ['invdel', 'invd'])
+    async def delete(self, ctx, invite: discord.Invite):
+        if self.checkInvos(ctx.guild.id) == 1:
+            await ctx.message.delete(delay=3)
+
+        if self.checkPerms(ctx.author.id, ctx.guild.id) == False:
+            await ctx.send("You are not permitted to run this command")
+            return
+
+        try:
+            await invite.delete()
+            self.log(ctx.guild.id, f"{ctx.author}[{ctx.author.id}] deleted invite {invite.code}")
+            await self.serverLog(ctx.guild.id, "inv_deleted", f"{ctx.author}[`{ctx.author.id}`] deleted invite {invite.code}")
+        except discord.HTTPException as msg_ex:
+            if msg_ex.code == 50013 and msg_ex.status == 403:
+                await ctx.send("Bot is missing permissions to delete an invite.")
+                return
+
+    @delete.error
+    async def delete_err_handler(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            if error.param.name == "invite":
+                await ctx.send("Your command is missing a required argument: a valid Discord invite link or invite code")
+        if isinstance(error, commands.BadInviteArgument):
+            await ctx.send("Invite you are trying to use is invalid or expired")
 
     def log(self, guild_id, log_msg: str):
         with open('main-config.json', 'r') as f:
