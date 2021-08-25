@@ -1,0 +1,17 @@
+{
+    "General": {
+        "DeleteInvocations": 0,
+        "AdminRoles": [],
+        "ServerLog": 0,
+        "Prefix": "i!",
+        "WelcomeMessage": "None"
+    },
+    "Invites": {
+        "4PetzGP227": {
+            "name": "BGN",
+            "roles": [],
+            "uses": 0,
+            "welcome": "None"
+        }
+    }
+}

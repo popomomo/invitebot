@@ -2,3 +2,25 @@
 [2021-08-23 15:26:04.309494] [INTERNAL]: Cogs named: errors invs other owner  were loaded
 [2021-08-23 15:26:04.309674] [INTERNAL]: Status service started
 [2021-08-23 15:26:04.309791] [INTERNAL]: InviteBot ready
+[2021-08-23 15:38:39.916365] [INTERNAL]: InviteBot started
+[2021-08-23 15:38:39.926907] [INTERNAL]: Cogs named: errors invs other owner  were loaded
+[2021-08-23 15:38:39.927143] [INTERNAL]: Status service started
+[2021-08-23 15:38:39.927264] [INTERNAL]: InviteBot ready
+[2021-08-23 15:41:42.414499] [261726709919776769] [OTHER]: Joined new guild - Test [261726709919776769]
+[2021-08-23 16:19:17.881129] [159353114489651200] [GLOBAL-ERR-HANDLR]: Ignoring exception that happened in Dream Team
+ in command None, which was run by pOpO[122756829964009472]:
+discord.ext.commands.errors.CommandNotFound: Command "listconfig" is not found
+[2021-08-23 17:30:16.818130] [INTERNAL]: InviteBot started
+[2021-08-23 17:30:17.039910] [INTERNAL]: Cogs named: errors invs other owner  were loaded
+[2021-08-23 17:30:17.052326] [INTERNAL]: Status service started
+[2021-08-23 17:30:17.068112] [INTERNAL]: InviteBot ready
+[2021-08-23 17:32:15.254269] [159353114489651200] [INVROLES]: pOpO#6510[122756829964009472] removed all links to invite Wz8nC7H
+[2021-08-23 17:33:26.367136] [261726709919776769] [INVROLES]: Invite 4PetzGP227 was created
+[2021-08-23 17:33:26.548881] [261726709919776769] [INVROLES]: pOpO#6510[122756829964009472] created an invite https://discord.gg/4PetzGP227 named BGN in general with Dream Team on join, age: 0 and uses: 0
+[2021-08-23 17:34:05.505969] [261726709919776769] [INVROLES]: pOpO#6510[122756829964009472] removed all links to invite 4PetzGP227
+[2021-08-23 17:35:45.110642] [159353114489651200] [INVROLES]: Invite FSum4HtYmx was created
+[2021-08-23 17:35:45.554266] [159353114489651200] [INVROLES]: pOpO#6510[122756829964009472] created an invite https://discord.gg/FSum4HtYmx named BGN in dt-general with Dream Team on join, age: 0 and uses: 0
+[2021-08-25 06:12:18.798923] [INTERNAL]: InviteBot started
+[2021-08-25 06:12:18.810241] [INTERNAL]: Cogs named: errors invs other owner  were loaded
+[2021-08-25 06:12:18.810459] [INTERNAL]: Status service started
+[2021-08-25 06:12:18.810556] [INTERNAL]: InviteBot ready
