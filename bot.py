@@ -114,7 +114,7 @@ async def status_task():
         except:
             pass
         
-WHEN = datetime.time(10, 0, 0)  # 6:00 PM
+WHEN = datetime.time(14, 15, 0)  # 6:00 PM
 channel_id = 829651715502374982 # Put your channel id here
 
 async def called_once_a_day():  # Fired every day
@@ -138,6 +138,6 @@ async def background_task():
         seconds = (tomorrow - now).total_seconds()  # Seconds until tomorrow (midnight)
         await asyncio.sleep(seconds)   # Sleep until tomorrow and then the loop will start a new iteration
 
-if __name__ == "__main__":
-    client.loop.create_task(background_task())
-    client.run(token)
+client.loop.create_task(background_task())
+
+client.run(token)
