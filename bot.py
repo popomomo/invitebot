@@ -7,6 +7,8 @@ import asyncio
 import datetime
 import traceback
 import sys
+import io
+import aiohttp
 intents = discord.Intents.default()
 intents.members = True
 
@@ -114,13 +116,19 @@ async def status_task():
         except:
             pass
         
-WHEN = datetime.time(7, 20, 0)  # 6:00 PM
+WHEN = datetime.time(10, 15, 0)  # 6:00 PM
 channel_id = 829651715502374982 # Put your channel id here
 
 async def called_once_a_day():  # Fired every day
     await client.wait_until_ready()  # Make sure your guild cache is ready so the channel can be found via get_channel
     channel = client.get_channel(channel_id) # Note: It's more efficient to do bot.get_guild(guild_id).get_channel(channel_id) as there's less looping involved, but just get_channel still works fine
-    await channel.send(";fg")
+    
+    async with aiohttp.ClientSession() as session:
+        async with session.get(my_url) as resp:
+            if resp.status != 200:
+                return await channel.send('Could not download file...')
+            data = io.BytesIO(await resp.read())
+            await channel.send(file=discord.File(data, 'https://alternative.me/crypto/fear-and-greed-index.png'))
 
 async def background_task():
     now = datetime.datetime.utcnow()
