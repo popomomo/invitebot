@@ -114,7 +114,7 @@ async def status_task():
         except:
             pass
         
-WHEN = datetime.time(14, 15, 0)  # 6:00 PM
+WHEN = datetime.time(7, 20, 0)  # 6:00 PM
 channel_id = 829651715502374982 # Put your channel id here
 
 async def called_once_a_day():  # Fired every day
