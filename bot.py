@@ -138,6 +138,6 @@ async def background_task():
         seconds = (tomorrow - now).total_seconds()  # Seconds until tomorrow (midnight)
         await asyncio.sleep(seconds)   # Sleep until tomorrow and then the loop will start a new iteration
 
-client.loop.create_task(background_task())
-
-client.run(token)
+if __name__ == "__main__":
+    client.loop.create_task(background_task())
+    client.run(token)
