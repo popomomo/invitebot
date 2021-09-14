@@ -116,24 +116,25 @@ async def status_task():
         except:
             pass
         
-WHEN = datetime.time(10, 15, 0)  # 6:00 PM
+WHEN = datetime.time(3, 0, 0)  # 6:00 PM
 channel_id = 829651715502374982 # Put your channel id here
 
 async def called_once_a_day():  # Fired every day
     await client.wait_until_ready()  # Make sure your guild cache is ready so the channel can be found via get_channel
     channel = client.get_channel(channel_id) # Note: It's more efficient to do bot.get_guild(guild_id).get_channel(channel_id) as there's less looping involved, but just get_channel still works fine
     
+    fngUrl = "https://alternative.me/crypto/fear-and-greed-index.png"
     async with aiohttp.ClientSession() as session:
-        async with session.get(my_url) as resp:
-            if resp.status != 200:
-                return await channel.send('Could not download file...')
-            data = io.BytesIO(await resp.read())
-            await channel.send(file=discord.File(data, 'https://alternative.me/crypto/fear-and-greed-index.png'))
+      async with session.get(fngUrl) as resp:
+          if resp.status != 200:
+              return await channel.send('Could not download file...')
+          data = io.BytesIO(await resp.read())
+          await channel.send(file=discord.File(data, 'fear-and-greed-index.png'))
 
 async def background_task():
     now = datetime.datetime.utcnow()
     if now.time() > WHEN:  # Make sure loop doesn't start after {WHEN} as then it will send immediately the first time as negative seconds will make the sleep yield instantly
-        tomorrow = datetime.datetime.combine(now.date() + timedelta(days=1), time(0))
+        tomorrow = datetime.datetime.combine(now.date() + datetime.timedelta(days=1), datetime.time(0))
         seconds = (tomorrow - now).total_seconds()  # Seconds until tomorrow (midnight)
         await asyncio.sleep(seconds)   # Sleep until tomorrow and then the loop will start 
     while True:
@@ -142,7 +143,7 @@ async def background_task():
         seconds_until_target = (target_time - now).total_seconds()
         await asyncio.sleep(seconds_until_target)  # Sleep until we hit the target time
         await called_once_a_day()  # Call the helper function that sends the message
-        tomorrow = datetime.datetime.combine(now.date() + timedelta(days=1), time(0))
+        tomorrow = datetime.datetime.combine(now.date() + datetime.timedelta(days=1), datetime.time(0))
         seconds = (tomorrow - now).total_seconds()  # Seconds until tomorrow (midnight)
         await asyncio.sleep(seconds)   # Sleep until tomorrow and then the loop will start a new iteration
 

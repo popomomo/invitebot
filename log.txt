@@ -24,3 +24,39 @@ discord.ext.commands.errors.CommandNotFound: Command "listconfig" is not found
 [2021-08-25 06:12:18.810241] [INTERNAL]: Cogs named: errors invs other owner  were loaded
 [2021-08-25 06:12:18.810459] [INTERNAL]: Status service started
 [2021-08-25 06:12:18.810556] [INTERNAL]: InviteBot ready
+[2021-08-25 09:20:49.462441] [INTERNAL]: InviteBot started
+[2021-08-25 09:20:49.523377] [INTERNAL]: Cogs named: errors owner invs other  were loaded
+[2021-08-25 09:20:49.523691] [INTERNAL]: Status service started
+[2021-08-25 09:20:49.523907] [INTERNAL]: InviteBot ready
+[2021-09-14 10:12:47.711673] [INTERNAL]: InviteBot started
+[2021-09-14 10:12:47.738147] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2021-09-14 10:12:47.738353] [INTERNAL]: Status service started
+[2021-09-14 10:12:47.738454] [INTERNAL]: InviteBot ready
+[2021-09-14 10:21:06.424617] [INTERNAL]: InviteBot started
+[2021-09-14 10:21:06.432395] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2021-09-14 10:21:06.432573] [INTERNAL]: Status service started
+[2021-09-14 10:21:06.432702] [INTERNAL]: InviteBot ready
+[2021-09-14 10:24:13.444977] [INTERNAL]: InviteBot started
+[2021-09-14 10:24:13.454071] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2021-09-14 10:24:13.454290] [INTERNAL]: Status service started
+[2021-09-14 10:24:13.454408] [INTERNAL]: InviteBot ready
+[2021-09-14 10:27:42.212693] [INTERNAL]: InviteBot started
+[2021-09-14 10:27:42.221844] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2021-09-14 10:27:42.222085] [INTERNAL]: Status service started
+[2021-09-14 10:27:42.222219] [INTERNAL]: InviteBot ready
+[2021-09-14 10:31:33.778294] [INTERNAL]: InviteBot started
+[2021-09-14 10:31:33.784998] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2021-09-14 10:31:33.785180] [INTERNAL]: Status service started
+[2021-09-14 10:31:33.785301] [INTERNAL]: InviteBot ready
+[2021-09-14 10:33:22.344906] [INTERNAL]: InviteBot started
+[2021-09-14 10:33:22.351983] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2021-09-14 10:33:22.352215] [INTERNAL]: Status service started
+[2021-09-14 10:33:22.352381] [INTERNAL]: InviteBot ready
+[2021-09-14 10:53:02.160575] [INTERNAL]: InviteBot started
+[2021-09-14 10:53:02.167874] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2021-09-14 10:53:02.168048] [INTERNAL]: Status service started
+[2021-09-14 10:53:02.168129] [INTERNAL]: InviteBot ready
+[2021-09-14 10:59:35.241205] [INTERNAL]: InviteBot started
+[2021-09-14 10:59:35.248659] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2021-09-14 10:59:35.248902] [INTERNAL]: Status service started
+[2021-09-14 10:59:35.249016] [INTERNAL]: InviteBot ready
