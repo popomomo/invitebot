@@ -1,0 +1,131 @@
+{
+    "General": {
+        "DeleteInvocations": 0,
+        "AdminRoles": [],
+        "ServerLog": 0,
+        "Prefix": "i!",
+        "WelcomeMessage": "None"
+    },
+    "Invites": {
+        "3PAY5p4dBq": {
+            "name": "None",
+            "roles": [],
+            "uses": 1,
+            "welcome": "None"
+        },
+        "6s9Q5bEPSR": {
+            "name": "None",
+            "roles": [],
+            "uses": 2607,
+            "welcome": "None"
+        },
+        "9stVxeFk9J": {
+            "name": "None",
+            "roles": [],
+            "uses": 1548,
+            "welcome": "None"
+        },
+        "AS2Yud7CRs": {
+            "name": "None",
+            "roles": [],
+            "uses": 112,
+            "welcome": "None"
+        },
+        "BKEt3bCq": {
+            "name": "None",
+            "roles": [],
+            "uses": 0,
+            "welcome": "None"
+        },
+        "Br5TzTy65g": {
+            "name": "None",
+            "roles": [],
+            "uses": 0,
+            "welcome": "None"
+        },
+        "EmtNrhQj": {
+            "name": "None",
+            "roles": [],
+            "uses": 2,
+            "welcome": "None"
+        },
+        "FjPZXVnC": {
+            "name": "None",
+            "roles": [],
+            "uses": 0,
+            "welcome": "None"
+        },
+        "MwXDuZq5": {
+            "name": "None",
+            "roles": [],
+            "uses": 0,
+            "welcome": "None"
+        },
+        "QEYdUSMj": {
+            "name": "None",
+            "roles": [],
+            "uses": 0,
+            "welcome": "None"
+        },
+        "SdCQrRcS": {
+            "name": "None",
+            "roles": [],
+            "uses": 0,
+            "welcome": "None"
+        },
+        "WH7F4wN4vG": {
+            "name": "None",
+            "roles": [],
+            "uses": 0,
+            "welcome": "None"
+        },
+        "a5kcmeTRqj": {
+            "name": "None",
+            "roles": [],
+            "uses": 3,
+            "welcome": "None"
+        },
+        "addqb9Dr": {
+            "name": "None",
+            "roles": [],
+            "uses": 0,
+            "welcome": "None"
+        },
+        "dTAyrygS4y": {
+            "name": "None",
+            "roles": [],
+            "uses": 0,
+            "welcome": "None"
+        },
+        "kfKmr6tg": {
+            "name": "None",
+            "roles": [],
+            "uses": 0,
+            "welcome": "None"
+        },
+        "qJ2Gxc5UCR": {
+            "name": "None",
+            "roles": [],
+            "uses": 1,
+            "welcome": "None"
+        },
+        "wbBA7c6fC4": {
+            "name": "None",
+            "roles": [],
+            "uses": 2,
+            "welcome": "None"
+        },
+        "y26rTvfC": {
+            "name": "None",
+            "roles": [],
+            "uses": 0,
+            "welcome": "None"
+        },
+        "fqSwFxBr": {
+            "name": "None",
+            "roles": [],
+            "uses": 0,
+            "welcome": "None"
+        }
+    }
+}

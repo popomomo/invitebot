@@ -111,17 +111,19 @@ async def status_task():
                 members += guild.member_count
             await client.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.playing, name=f"on {len(client.guilds)} guilds with {members} members"))
             await asyncio.sleep(30)
-            await client.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.playing, name="i!help | https://invitebot.xyz"))
+            await client.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.playing, name="Whoo Za!!"))
             await asyncio.sleep(30)
         except:
             pass
         
 WHEN = datetime.time(3, 0, 0)  # 6:00 PM
 channel_id = 829651715502374982 # Put your channel id here
+channel_id2 = 913655239415058432 # CWC channel
 
 async def called_once_a_day():  # Fired every day
     await client.wait_until_ready()  # Make sure your guild cache is ready so the channel can be found via get_channel
     channel = client.get_channel(channel_id) # Note: It's more efficient to do bot.get_guild(guild_id).get_channel(channel_id) as there's less looping involved, but just get_channel still works fine
+    channel2 = client.get_channel(channel_id2)
     
     fngUrl = "https://alternative.me/crypto/fear-and-greed-index.png"
     async with aiohttp.ClientSession() as session:
@@ -130,6 +132,7 @@ async def called_once_a_day():  # Fired every day
               return await channel.send('Could not download file...')
           data = io.BytesIO(await resp.read())
           await channel.send(file=discord.File(data, 'fear-and-greed-index.png'))
+          await channel2.send(file=discord.File(data, 'fear-and-greed-index.png'))
 
 async def background_task():
     now = datetime.datetime.utcnow()

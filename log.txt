@@ -60,3 +60,50 @@ discord.ext.commands.errors.CommandNotFound: Command "listconfig" is not found
 [2021-09-14 10:59:35.248659] [INTERNAL]: Cogs named: errors other invs owner  were loaded
 [2021-09-14 10:59:35.248902] [INTERNAL]: Status service started
 [2021-09-14 10:59:35.249016] [INTERNAL]: InviteBot ready
+[2021-09-14 17:09:15.704758] [INTERNAL]: InviteBot started
+[2021-09-14 17:09:15.720545] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2021-09-14 17:09:15.720752] [INTERNAL]: Status service started
+[2021-09-14 17:09:15.720877] [INTERNAL]: InviteBot ready
+[2021-09-14 18:29:32.249026] [INTERNAL]: InviteBot started
+[2021-09-14 18:29:32.255426] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2021-09-14 18:29:32.255601] [INTERNAL]: Status service started
+[2021-09-14 18:29:32.255719] [INTERNAL]: InviteBot ready
+[2022-01-05 00:39:17.029135] [INTERNAL]: InviteBot started
+[2022-01-05 00:39:17.073893] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-05 00:39:17.074081] [INTERNAL]: Status service started
+[2022-01-05 00:39:17.074180] [INTERNAL]: InviteBot ready
+[2022-01-05 22:29:17.844390] [INTERNAL]: InviteBot started
+[2022-01-05 22:29:17.852154] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-05 22:29:17.852356] [INTERNAL]: Status service started
+[2022-01-05 22:29:17.852469] [INTERNAL]: InviteBot ready
+[2022-01-05 23:14:14.665239] [INTERNAL]: InviteBot started
+[2022-01-05 23:14:14.677696] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-05 23:14:14.677916] [INTERNAL]: Status service started
+[2022-01-05 23:14:14.678004] [INTERNAL]: InviteBot ready
+[2022-01-06 22:14:15.107792] [INTERNAL]: InviteBot started
+[2022-01-06 22:14:15.136630] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-06 22:14:15.139375] [INTERNAL]: Status service started
+[2022-01-06 22:14:15.139508] [INTERNAL]: InviteBot ready
+[2022-01-06 23:09:10.564968] [INTERNAL]: InviteBot started
+[2022-01-06 23:09:10.573299] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-06 23:09:10.573511] [INTERNAL]: Status service started
+[2022-01-06 23:09:10.573644] [INTERNAL]: InviteBot ready
+[2022-01-07 22:49:10.353086] [INTERNAL]: InviteBot started
+[2022-01-07 22:49:10.373752] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-07 22:49:10.374526] [INTERNAL]: Status service started
+[2022-01-07 22:49:10.374661] [INTERNAL]: InviteBot ready
+[2022-01-08 04:14:08.720176] [INTERNAL]: InviteBot started
+[2022-01-08 04:14:08.736702] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-08 04:14:08.736948] [INTERNAL]: Status service started
+[2022-01-08 04:14:08.737067] [INTERNAL]: InviteBot ready
+[2022-01-08 22:54:16.455824] [INTERNAL]: InviteBot started
+[2022-01-08 22:54:16.552342] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-08 22:54:16.555762] [INTERNAL]: Status service started
+[2022-01-08 22:54:16.557787] [INTERNAL]: InviteBot ready
+[2022-01-09 00:09:11.056181] [INTERNAL]: InviteBot started
+[2022-01-09 00:09:11.065599] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-09 00:09:11.065780] [INTERNAL]: Status service started
+[2022-01-09 00:09:11.065905] [INTERNAL]: InviteBot ready
+[2022-01-09 12:11:11.621727] [899540938764976178] [OTHER]: Joined new guild - CuttoWinCrypto [899540938764976178]
+[2022-01-09 12:19:20.233788] [899540938764976178] [INVROLES]: User dekpee1985[917496396989464611] joined with invite 9stVxeFk9J
+[2022-01-09 12:19:20.241624] [899540938764976178] [INVROLES]: New Invite fqSwFxBr
