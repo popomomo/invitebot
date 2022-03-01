@@ -18,7 +18,10 @@ class Invs(commands.Cog):
         with open(f'configs/{invite.guild.id}.json', 'r') as f:
             invites = json.load(f)
 
-        invites['Invites'][f"{invite.code}"] = {"name": "None", "roles": [], "uses": 0, "welcome": "None"}
+        if invite.max_uses == 1:
+            invites['Invites'][f"{invite.code}"] = {"name": "None", "roles": [], "uses": 0, "welcome": "None", "tags": {"1use": True}}
+        else:
+            invites['Invites'][f"{invite.code}"] = {"name": "None", "roles": [], "uses": 0, "welcome": "None", "tags": {}}
 
         with open(f'configs/{invite.guild.id}.json', 'w') as f:
             json.dump(invites, f, indent = 4)
@@ -30,55 +33,155 @@ class Invs(commands.Cog):
     async def on_invite_delete(self, invite):
         with open(f'configs/{invite.guild.id}.json', 'r') as f:
             invites = json.load(f)
-            inv_name = invites['Invites'][invite.code]['name']
 
-        del invites['Invites'][f"{invite.code}"]
+        # run the same code for retrieving used invites in find_used_invite to clearup unused 1use invites in this join
+        #print("Running 1use clearer")
+        invite_list = await invite.guild.invites()
+        srv_invites = {f"{inv.code}": {"uses": inv.uses} for inv in invite_list}
+        if len(invites['Invites']) != len(srv_invites):
+            for inv in list(invites['Invites'].keys()):
+                if (inv not in list(srv_invites.keys())) and (invites['Invites'][inv]["tags"]["1use"] == "used"):
+                    del invites['Invites'][f"{inv}"]
+                    break
+
+        # if invite is a 1use, marked it as used so addinvroles can read roles and then delete the inv
+        if "1use" in list(invites['Invites'][f"{invite.code}"]["tags"].keys()):
+            if invites['Invites'][f"{invite.code}"]["tags"]["1use"] == True:
+                invites['Invites'][f"{invite.code}"]["tags"]["1use"] = "used"
+
+                inv_name = invites['Invites'][invite.code]['name']
+                if inv_name != "None":
+                    self.log(invite.guild.id, f"Invite {inv_name} - {invite.code} marked as 1use was deleted")
+                    await self.serverLog(invite.guild.id, "inv_deleted", "Invite {0} - https://discord.gg/{1} | Invite Channel - <#{2}>\nInviter - {3}\nMax Age - {4} | Uses - {5}".format(inv_name, invite.code, invite.channel.id, invite.inviter, invite.max_age, invite.uses))
+                else:
+                    self.log(invite.guild.id, f'Invite {invite.code} marked as 1use was deleted')
+                    await self.serverLog(invite.guild.id, "inv_deleted", "Invite - https://discord.gg/{0} | Invite Channel - <#{1}>\nInviter - {2}\nMax Age - {3} | Uses - {4}".format(invite.code, invite.channel.id, invite.inviter, invite.max_age, invite.uses))
+
+        else:
+            inv_name = invites['Invites'][invite.code]['name']
+            if inv_name != "None":
+                self.log(invite.guild.id, f"Invite {inv_name} - {invite.code} was deleted")
+                await self.serverLog(invite.guild.id, "inv_deleted", "Invite {0} - https://discord.gg/{1} | Invite Channel - <#{2}>\nInviter - {3}\nMax Age - {4} | Uses - {5}".format(inv_name, invite.code, invite.channel.id, invite.inviter, invite.max_age, invite.uses))
+            else:
+                self.log(invite.guild.id, f'Invite {invite.code} was deleted')
+                await self.serverLog(invite.guild.id, "inv_deleted", "Invite - https://discord.gg/{0} | Invite Channel - <#{1}>\nInviter - {2}\nMax Age - {3} | Uses - {4}".format(invite.code, invite.channel.id, invite.inviter, invite.max_age, invite.uses))
+            del invites['Invites'][f"{invite.code}"]
 
         with open(f'configs/{invite.guild.id}.json', 'w') as f:
             json.dump(invites, f, indent = 4)
-
-        if inv_name != "None":
-            self.log(invite.guild.id, f"Invite {inv_name} - {invite.code} was deleted")
-            await self.serverLog(invite.guild.id, "inv_deleted", "Invite {0} - https://discord.gg/{1} | Invite Channel - <#{2}>\nInviter - {3}\nMax Age - {4} | Uses - {5}".format(inv_name, invite.code, invite.channel.id, invite.inviter, invite.max_age, invite.uses))
-        else:
-            self.log(invite.guild.id, f'Invite {invite.code} was deleted')
-            await self.serverLog(invite.guild.id, "inv_deleted", "Invite - https://discord.gg/{0} | Invite Channel - <#{1}>\nInviter - {2}\nMax Age - {3} | Uses - {4}".format(invite.code, invite.channel.id, invite.inviter, invite.max_age, invite.uses))
 
 
     @commands.Cog.listener()
     async def on_member_join(self, member):
         if member.bot == True:
             return
+        await asyncio.sleep(1)
         await self.add_inv_roles(await self.find_used_invite(member), member)
 
     async def add_inv_roles(self, invite, member):
         with open(f'configs/{member.guild.id}.json', 'r') as f:
             invites = json.load(f)
 
-        try:
-            if invites['Invites'][f"{invite}"]["roles"] == []:
-                return
-        except KeyError:
-                # its the cool 1-inv escp, but we dont get member here due to sth, has to be fixed in the parent func
-                # NoneType gets thrown here || await self.log(member.guild.id, f"There was this wild log here with a misdone configuration I have no mind for rn. Details:\nInvite Code: {invite}, Guild: {member.guild.id}, Member: {member}")
-                await self.log('0', f"There was this wild log here with a misdone configuration I have no mind for rn. Details:\nInvite Code: {invite}, Guild: '0', Member: {member}")
-                return
+        #try:
+        #    if invites['Invites'][f"{invite}"]["roles"] == []:
+        #        return
+        #except KeyError:
+        #        # its the cool 1-inv escp, but we dont get member here due to sth, has to be fixed in the parent func
+        #        # NoneType gets thrown here || await self.log(member.guild.id, f"There was this wild log here with a misdone configuration I have no mind for rn. Details:\nInvite Code: {invite}, Guild: {member.guild.id}, Member: {member}")
+        #        #await self.log('0', f"There was this wild log here with a misdone configuration I have no mind for rn. Details:\nInvite Code: {invite}, Guild: '0', Member: {member}")
+        #        return
 
         try:
-            roles = []
-            rolenames = []
-            for role_id in invites['Invites'][f"{invite}"]["roles"]:
-                role = member.guild.get_role(role_id)
-                roles.append(role)
-                rolenames.append(role.name)
-            await member.add_roles(*roles)
-            self.log(member.guild.id, f"Found invite roles: {rolenames} and roles were added")
+            if invites['Invites'][f"{invite}"]["roles"] != []:
+                roles = []
+                rolenames = []
+                for role_id in invites['Invites'][f"{invite}"]["roles"]:
+                    role = member.guild.get_role(role_id)
+                    roles.append(role)
+                    rolenames.append(role.name)
+
+                # community server & rule screening checkpart
+                if ("COMMUNITY" in member.guild.features) and ("WELCOME_SCREEN_ENABLED" in member.guild.features):
+                    if "awaitrules" in list(invites["Invites"][f"{invite}"]["tags"].keys()):
+                        if (invites["General"]["AwaitRulesAccept"] == True) or (invites["Invites"][f"{invite}"]["tags"]["awaitrules"] == True):
+                            while member.pending == True:
+                                # awaiting user rules acceptance
+                                await asyncio.sleep(3)
+
+                await member.add_roles(*roles)
+                self.log(member.guild.id, f"Found invite roles: {rolenames} and roles were added")
+            else:
+                self.log(member.guild.id, f"No role for invite {invite}")
         except KeyError:
             self.log(member.guild.id, f"No role for invite {invite}")
+
+        try:
+            with open(f'configs/{member.guild.id}.json', 'r') as f:
+                invites = json.load(f)
+            if invites["Invites"][f"{invite}"]["tags"]["1use"] == "used":
+
+                inv_name = invites['Invites'][invite]['name']
+                if inv_name != "None":
+                    self.log(member.guild.id, f'Invite {inv_name} - {invite} marked as 1use was used')
+                    await self.serverLog(member.guild.id, "inv_used", f"Invite {inv_name} - https://discord.gg/{invite}")
+                else:
+                    self.log(member.guild.id, f'Invite {invite} marked as 1use was used')
+                    await self.serverLog(member.guild.id, "inv_used", f"Invite - https://discord.gg/{invite}")
+
+                del invites['Invites'][f"{invite}"]
+
+                with open(f'configs/{member.guild.id}.json', 'w') as f:
+                    json.dump(invites, f, indent = 4)
+        except KeyError:
+            pass
+
+        srv_invites = {}
+        for inv in await member.guild.invites():
+            try:
+                srv_invites[f"{inv.code}"] = {"inviter": inv.inviter.id}
+            except:
+                # landing here probably means there is a desync between invites fetched at the start of iterating and through it
+                # i have no idea what could cause that
+                pass
+        #srv_invites = {f"{inv.code}": {"inviter": inv.inviter.id} for inv in await member.guild.invites()}
+        if f"{invite}" in list(srv_invites.keys()):
+            await self.analytics_add(member.guild.id, member.id, srv_invites[f"{invite}"]["inviter"], 1)
+        else:
+            # landing here means 1use invite was used
+            # this is #1 not usefule to track as I cant imagine anyone wanting to create an invite with 1 use for inviting as many poor souls as he can
+            # and #2 this would mena we have to mark the inviter in the invites dict in config as 1use invites won't fetch us inviter.ids as the invite doesnt exist on remote
+            # it can certainly be done, but at this very moment I do not see the need to
+            pass
+
+        with open(f'configs/{member.guild.id}.json', 'r') as f:
+            invites = json.load(f)
+
+        # run the same code for retrieving used invites in find_used_invite to clearup unused 1use invites in this join
+        #print("Running 1use clearer")
+        invite_list = await member.guild.invites()
+        srv_invites = {}
+        srv_invites = {f"{invite.code}": {"uses": invite.uses} for invite in invite_list}
+        if len(invites['Invites']) != len(srv_invites):
+            for invite in list(invites['Invites'].keys()):
+                if invite not in list(srv_invites.keys()):
+                    del invites['Invites'][f"{invite}"]
+                    break
+
+        with open(f'configs/{member.guild.id}.json', 'w') as f:
+            json.dump(invites, f, indent = 4)
+
 
     async def find_used_invite(self, member):
         found_code = ''
         invite_list = await member.guild.invites()
+        try:
+            if await member.guild.vanity_invite() != None:
+                invite_list.append(await member.guild.vanity_invite())
+        except discord.HTTPException as msg_ex:
+            if msg_ex.code == 50013 and msg_ex.status == 403:
+                #await ctx.send("Bot is missing permissions to see if vanity url is available")
+                self.log("0", "Bot is missing permissions to see if vanity url is available")
+                pass
         uses = {}
 
         with open(f'configs/{member.guild.id}.json', 'r') as f:
@@ -91,26 +194,28 @@ class Invs(commands.Cog):
         for invite in invite_list:
             uses[f"{invite.code}"] = invite.uses
             try:
-                if uses[f"{invite.code}"] != curr_uses[f"{invite.code}"]:
+                if (uses[f"{invite.code}"] != curr_uses[f"{invite.code}"]) and (uses[f"{invite.code}"] != 0):
                     if invites['Invites'][f"{invite.code}"]['name'] != "None":
                         self.log(invite.guild.id, f"User {member.name}[{member.id}] joined with invite {invite.code} named {invites['Invites'][invite.code]['name']}")
-                        await self.serverLog(member.guild.id, "member_joined", "Member <@{0}>[`{1}`] joined with invite `{2}` named".format(member.id, member.id, invite.code, invites['Invites'][invite.code]['name']))
+                        await self.serverLog(member.guild.id, "member_joined", "Member <@{0}>[`{1}`] joined with invite `{2}` named {3}".format(member.id, member.id, invite.code, invites['Invites'][invite.code]['name']))
 
                         if invites['Invites'][f"{invite.code}"]['welcome'] != "None":
                             recipient = self.client.get_user(member.id)
-                            embed = discord.Embed(title = f"**InviteBot**", description = invites['Invites'][f"{invite.code}"]['welcome'], color = discord.Colour.from_rgb(119, 137, 218))
+                            embed = discord.Embed(title = f"**Invitebot**", description = invites['Invites'][f"{invite.code}"]['welcome'], color = discord.Colour.from_rgb(119, 137, 218))
                             embed.set_thumbnail(url="https://invitebot.xyz/icons/invitebot-logo.png")
                             now = datetime.datetime.now()
-                            embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | InviteBot made with \u2764\ufe0f by Nevalicjus")
+                            embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | Invitebot made with \u2764\ufe0f by Nevalicjus")
                             await recipient.send(embed = embed)
 
                         elif invites['General']['WelcomeMessage'] != "None":
                             recipient = self.client.get_user(member.id)
-                            embed = discord.Embed(title = f"**InviteBot**", description = invites['General']['WelcomeMessage'], color = discord.Colour.from_rgb(119, 137, 218))
+                            embed = discord.Embed(title = f"**Invitebot**", description = invites['General']['WelcomeMessage'], color = discord.Colour.from_rgb(119, 137, 218))
                             embed.set_thumbnail(url="https://invitebot.xyz/icons/invitebot-logo.png")
                             now = datetime.datetime.now()
-                            embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | InviteBot made with \u2764\ufe0f by Nevalicjus")
+                            embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | Invitebot made with \u2764\ufe0f by Nevalicjus")
                             await recipient.send(embed = embed)
+                        found_code = invite.code
+                        break
 
                     else:
                         self.log(invite.guild.id, f"User {member.name}[{member.id}] joined with invite {invite.code}")
@@ -118,21 +223,22 @@ class Invs(commands.Cog):
 
                         if invites['Invites'][f"{invite.code}"]['welcome'] != "None":
                             recipient = self.client.get_user(member.id)
-                            embed = discord.Embed(title = f"**InviteBot**", description = invites['Invites'][f"{invite.code}"]['welcome'], color = discord.Colour.from_rgb(119, 137, 218))
+                            embed = discord.Embed(title = f"**Invitebot**", description = invites['Invites'][f"{invite.code}"]['welcome'], color = discord.Colour.from_rgb(119, 137, 218))
                             embed.set_thumbnail(url="https://invitebot.xyz/icons/invitebot-logo.png")
                             now = datetime.datetime.now()
-                            embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | InviteBot made with \u2764\ufe0f by Nevalicjus")
+                            embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | Invitebot made with \u2764\ufe0f by Nevalicjus")
                             await recipient.send(embed = embed)
 
                         elif invites['General']['WelcomeMessage'] != "None":
                             recipient = self.client.get_user(member.id)
-                            embed = discord.Embed(title = f"**InviteBot**", description = invites['General']['WelcomeMessage'], color = discord.Colour.from_rgb(119, 137, 218))
+                            embed = discord.Embed(title = f"**Invitebot**", description = invites['General']['WelcomeMessage'], color = discord.Colour.from_rgb(119, 137, 218))
                             embed.set_thumbnail(url="https://invitebot.xyz/icons/invitebot-logo.png")
                             now = datetime.datetime.now()
-                            embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | InviteBot made with \u2764\ufe0f by Nevalicjus")
+                            embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | Invitebot made with \u2764\ufe0f by Nevalicjus")
                             await recipient.send(embed = embed)
+                        found_code = invite.code
+                        break
 
-                    found_code = invite.code
             except KeyError:
                 with open(f'configs/{member.guild.id}.json', 'r') as f:
                     invites = json.load(f)
@@ -158,6 +264,52 @@ class Invs(commands.Cog):
         with open(f'configs/{invite.guild.id}.json', 'w') as f:
             json.dump(invites, f, indent = 4)
 
+        srv_invites = {f"{invite.code}": {"uses": invite.uses} for invite in invite_list}
+        if (len(invites['Invites']) != len(srv_invites)) and (found_code == ""):
+            for invite in list(invites['Invites'].keys()):
+                if invite not in list(srv_invites.keys()):
+                    if invites['Invites'][f"{invite}"]['name'] != "None":
+                        self.log(member.guild.id, f"User {member.name}[{member.id}] joined with invite {invite} named {invites['Invites'][invite]['name']}")
+                        await self.serverLog(member.guild.id, "member_joined", "Member <@{0}>[`{1}`] joined with invite `{2}` named {3}".format(member.id, member.id, invite, invites['Invites'][invite]['name']))
+
+                        if invites['Invites'][f"{invite}"]['welcome'] != "None":
+                            recipient = self.client.get_user(member.id)
+                            embed = discord.Embed(title = f"**Invitebot**", description = invites['Invites'][f"{invite}"]['welcome'], color = discord.Colour.from_rgb(119, 137, 218))
+                            embed.set_thumbnail(url="https://invitebot.xyz/icons/invitebot-logo.png")
+                            now = datetime.datetime.now()
+                            embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | Invitebot made with \u2764\ufe0f by Nevalicjus")
+                            await recipient.send(embed = embed)
+
+                        elif invites['General']['WelcomeMessage'] != "None":
+                            recipient = self.client.get_user(member.id)
+                            embed = discord.Embed(title = f"**Invitebot**", description = invites['General']['WelcomeMessage'], color = discord.Colour.from_rgb(119, 137, 218))
+                            embed.set_thumbnail(url="https://invitebot.xyz/icons/invitebot-logo.png")
+                            now = datetime.datetime.now()
+                            embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | Invitebot made with \u2764\ufe0f by Nevalicjus")
+                            await recipient.send(embed = embed)
+
+                    else:
+                        self.log(member.guild.id, f"User {member.name}[{member.id}] joined with invite {invite}")
+                        await self.serverLog(member.guild.id, "member_joined", "Member <@{0}>[`{1}`] joined with invite `{2}`".format(member.id, member.id, invite))
+
+                        if invites['Invites'][f"{invite}"]['welcome'] != "None":
+                            recipient = self.client.get_user(member.id)
+                            embed = discord.Embed(title = f"**Invitebot**", description = invites['Invites'][f"{invite}"]['welcome'], color = discord.Colour.from_rgb(119, 137, 218))
+                            embed.set_thumbnail(url="https://invitebot.xyz/icons/invitebot-logo.png")
+                            now = datetime.datetime.now()
+                            embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | Invitebot made with \u2764\ufe0f by Nevalicjus")
+                            await recipient.send(embed = embed)
+
+                        elif invites['General']['WelcomeMessage'] != "None":
+                            recipient = self.client.get_user(member.id)
+                            embed = discord.Embed(title = f"**Invitebot**", description = invites['General']['WelcomeMessage'], color = discord.Colour.from_rgb(119, 137, 218))
+                            embed.set_thumbnail(url="https://invitebot.xyz/icons/invitebot-logo.png")
+                            now = datetime.datetime.now()
+                            embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | Invitebot made with \u2764\ufe0f by Nevalicjus")
+                            await recipient.send(embed = embed)
+                    found_code = invite
+                    break
+
         return found_code
 
     @commands.command(aliases = ['inva'])
@@ -165,7 +317,7 @@ class Invs(commands.Cog):
         if self.checkInvos(ctx.guild.id) == 1:
             await ctx.message.delete(delay=3)
 
-        if self.checkPerms(ctx.author.id, ctx.guild.id) == False:
+        if self.checkPerms(ctx.author.id, ctx.guild.id, ["admin"]) == False:
             await ctx.send("You are not permitted to run this command")
             return
 
@@ -212,7 +364,7 @@ class Invs(commands.Cog):
         if self.checkInvos(ctx.guild.id) == 1:
             await ctx.message.delete(delay=3)
 
-        if self.checkPerms(ctx.author.id, ctx.guild.id) == False:
+        if self.checkPerms(ctx.author.id, ctx.guild.id, ["admin"]) == False:
             await ctx.send("You are not permitted to run this command")
             return
 
@@ -255,7 +407,7 @@ class Invs(commands.Cog):
         if self.checkInvos(ctx.guild.id) == 1:
             await ctx.message.delete(delay=3)
 
-        if self.checkPerms(ctx.author.id, ctx.guild.id) == False:
+        if self.checkPerms(ctx.author.id, ctx.guild.id, ["admin", "manage_guild"]) == False:
             await ctx.send("You are not permitted to run this command")
             return
 
@@ -295,7 +447,7 @@ class Invs(commands.Cog):
         if self.checkInvos(ctx.guild.id) == 1:
             await ctx.message.delete(delay=3)
 
-        if self.checkPerms(ctx.author.id, ctx.guild.id) == False:
+        if self.checkPerms(ctx.author.id, ctx.guild.id, ["admin", "manage_guild"]) == False:
             await ctx.send("You are not permitted to run this command")
             return
 
@@ -335,14 +487,21 @@ class Invs(commands.Cog):
         if self.checkInvos(ctx.guild.id) == 1:
             await ctx.message.delete(delay=3)
 
-        if self.checkPerms(ctx.author.id, ctx.guild.id) == False:
+        if self.checkPerms(ctx.author.id, ctx.guild.id, ["admin", "manage_guild"]) == False:
             await ctx.send("You are not permitted to run this command")
             return
 
         with open(f'configs/{ctx.guild.id}.json', 'r') as f:
             invites = json.load(f)
 
-        if len(invites['Invites']) == 0:
+        l = []
+        for inv in list(invites['Invites'].keys()):
+            if "1use" in list(invites['Invites'][f"{inv}"]["tags"].keys()):
+                if invites['Invites'][f"{inv}"]['tags']['1use'] != "used":
+                    l.append(inv)
+            else:
+                l.append(inv)
+        if len(l) == 0:
             await ctx.send("You have no invites")
             return
 
@@ -351,9 +510,12 @@ class Invs(commands.Cog):
         embed = discord.Embed(title = f"**Invite List**", color = discord.Colour.from_rgb(119, 137, 218))
         embed.set_thumbnail(url=ctx.guild.icon_url_as(format="png"))
         now = datetime.datetime.now()
-        embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | InviteBot made with \u2764\ufe0f by Nevalicjus")
+        embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | Invitebot made with \u2764\ufe0f by Nevalicjus")
 
         for inv in invites['Invites']:
+            if "1use" in list(invites['Invites'][f"{inv}"]["tags"].keys()):
+                if invites['Invites'][f"{inv}"]["tags"]["1use"] == "used":
+                    continue
             about = ''
             for invrole in invites['Invites'][f"{inv}"]["roles"]:
                 role = ctx.guild.get_role(invrole)
@@ -378,7 +540,7 @@ class Invs(commands.Cog):
         if self.checkInvos(ctx.guild.id) == 1:
             await ctx.message.delete(delay=3)
 
-        if self.checkPerms(ctx.author.id, ctx.guild.id) == False:
+        if self.checkPerms(ctx.author.id, ctx.guild.id, ["admin"]) == False:
             await ctx.send("You are not permitted to run this command")
             return
 
@@ -406,6 +568,9 @@ class Invs(commands.Cog):
             invites['Invites'][f"{invite.code}"]['roles'] = []
         invites['Invites'][f"{invite.code}"]['uses'] = uses
         invites['Invites'][f"{invite.code}"]['welcome'] = "None"
+        invites['Invites'][f"{invite.code}"]['tags'] = {}
+        if uses == 1:
+            invites['Invites'][f"{invite.code}"]['tags']['1use'] = True
 
         if name == "None":
             if role == 0:
@@ -443,12 +608,107 @@ class Invs(commands.Cog):
 
         #await self.errorLog()
 
+    @commands.command(aliases = ['invmm'])
+    @commands.cooldown(1.0, 30.0, commands.BucketType.guild)
+    async def massmake(self, ctx, num: int, channel: discord.TextChannel, name: str = "None", role: discord.Role = 0, uses: int = 0, age: int = 0):
+        if self.checkInvos(ctx.guild.id) == 1:
+            await ctx.message.delete(delay=3)
+
+        if self.checkPerms(ctx.author.id, ctx.guild.id, ["admin"]) == False:
+            await ctx.send("You are not permitted to run this command")
+            return
+
+        bot_member = ctx.guild.get_member(self.client.user.id)
+        if role != 0:
+            if bot_member.top_role < role:
+                await ctx.send("I cannot assign this role to users (Bot's role is below the role you want to assign)")
+                return
+
+        if num > 20:
+            await ctx.send("For rate limiting reasons, you can create a maximum of 20 invites at a time")
+            return
+
+        with open(f'configs/{ctx.guild.id}.json', 'r') as f:
+            invites = json.load(f)
+
+        genned_invs = []
+
+        for i in range(0, int(num)):
+            await asyncio.sleep(1)
+            inv_name = f"{name}-{i}"
+
+            try:
+                invite = await channel.create_invite(max_age = age, max_uses = uses)
+            except discord.HTTPException as msg_ex:
+                if msg_ex.code == 50013 and msg_ex.status == 403:
+                    await ctx.send("Bot is missing permissions to create an invite.\n[https://docs.invitebot.xyz/error-helpers/#bot-is-missing-permissions-to-create-an-invite]")
+                    return
+
+            with open(f'configs/{ctx.guild.id}.json', 'r') as f:
+                invites = json.load(f)
+
+            invites['Invites'][f"{invite.code}"] = {}
+            invites['Invites'][f"{invite.code}"]['name'] = inv_name
+            if role != 0:
+                invites['Invites'][f"{invite.code}"]['roles'] = [role.id]
+            else:
+                invites['Invites'][f"{invite.code}"]['roles'] = []
+            invites['Invites'][f"{invite.code}"]['uses'] = uses
+            invites['Invites'][f"{invite.code}"]['welcome'] = "None"
+            invites['Invites'][f"{invite.code}"]['tags'] = {}
+            if uses == 1:
+                invites['Invites'][f"{invite.code}"]['tags']['1use'] = True
+
+            if name == "None":
+                if role == 0:
+                    #await ctx.send(f"{ctx.author}[`{ctx.author.id}`] created an invite https://discord.gg/{invite.code} in {channel}, age: {age} and uses: {uses}")
+                    self.log(invite.guild.id, f"{ctx.author}[{ctx.author.id}] created an invite https://discord.gg/{invite.code} in {channel}n, age: {age} and uses: {uses}")
+                    await self.serverLog(ctx.guild.id, "inv_made", "<@{0}>[`{1}`] created invite `https://discord.gg/{2}` in {3} with {4} on join, age: {5} and uses: {6}".format(ctx.author.id, ctx.author.id, invite.code, channel, role, invite.max_age, invite.max_uses))
+                else:
+                    #await ctx.send(f"{ctx.author}[`{ctx.author.id}`] created an invite https://discord.gg/{invite.code} in {channel} with {role} on join, age: {age} and uses: {uses}")
+                    self.log(invite.guild.id, f"{ctx.author}[{ctx.author.id}] created an invite https://discord.gg/{invite.code} in {channel} with {role} on join, age: {age} and uses: {uses}")
+                    await self.serverLog(ctx.guild.id, "inv_made", "<@{0}>[`{1}`] created invite `https://discord.gg/{2}` in {3}, age: {4} and uses: {5}".format(ctx.author.id, ctx.author.id, invite.code, channel, invite.max_age, invite.max_uses))
+            else:
+                if role == 0:
+                    #await ctx.send(f"{ctx.author}[`{ctx.author.id}`] created an invite https://discord.gg/{invite.code} named {name} in {channel}, age: {age} and uses: {uses}")
+                    self.log(invite.guild.id, f"{ctx.author}[{ctx.author.id}] created an invite https://discord.gg/{invite.code} named {name} in {channel}, age: {age} and uses: {uses}")
+                    await self.serverLog(ctx.guild.id, "inv_made", "<@{0}>[`{1}`] created invite `https://discord.gg/{2} named {3}` in {4}, age: {5} and uses: {6}".format(ctx.author.id, ctx.author.id, invite.code, name, channel, invite.max_age, invite.max_uses))
+                else:
+                    #await ctx.send(f"{ctx.author}[`{ctx.author.id}`] created an invite https://discord.gg/{invite.code} named {name} in {channel} with {role} on join, age: {age} and uses: {uses}")
+                    self.log(invite.guild.id, f"{ctx.author}[{ctx.author.id}] created an invite https://discord.gg/{invite.code} named {name} in {channel} with {role} on join, age: {age} and uses: {uses}")
+                    await self.serverLog(ctx.guild.id, "inv_made", "<@{0}>[`{1}`] created invite `https://discord.gg/{2} named {3}` in {4} with {5} on join, age: {6} and uses: {7}".format(ctx.author.id, ctx.author.id, invite.code, name, channel, role, invite.max_age, invite.max_uses))
+
+            genned_invs.append(f"Invite `{inv_name}` - <https://discord.gg/{invite.code}>\n")
+            with open(f'configs/{ctx.guild.id}.json', 'w') as f:
+                json.dump(invites, f, indent = 4)
+
+        await ctx.send(f"Generated {num} invites:\n{''.join(line for line in genned_invs)}")
+
+    @massmake.error
+    async def massmake_err_handler(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            if error.param.name == "num":
+                await ctx.send("Your command is missing a required argument: a valid integer")
+            if error.param.name == "channel":
+                await ctx.send("Your command is missing a required argument: a valid channel (Channel mention or Channel ID)")
+        if isinstance(error, commands.ChannelNotFound):
+            await ctx.send("Channel you are trying to mention or provide ID of doesn't exist")
+        if isinstance(error, commands.RoleNotFound):
+            await ctx.send("Role you are trying to mention or provide ID of doesn't exist")
+        if isinstance(error, commands.BadInviteArgument):
+            await ctx.send("Invite you are trying to use is invalid or expired")
+        if isinstance(error, commands.CommandOnCooldown):
+            await ctx.send(f"You are trying to use this command too fast. Cooldown is 30s and you can run your command in {self.massmake.get_cooldown_retry_after(ctx)}")
+
+        #await self.errorLog()
+
+
     @commands.command(aliases = ['invdel', 'invd'])
     async def delete(self, ctx, invite: discord.Invite):
         if self.checkInvos(ctx.guild.id) == 1:
             await ctx.message.delete(delay=3)
 
-        if self.checkPerms(ctx.author.id, ctx.guild.id) == False:
+        if self.checkPerms(ctx.author.id, ctx.guild.id, ["admin"]) == False:
             await ctx.send("You are not permitted to run this command")
             return
 
@@ -469,6 +729,40 @@ class Invs(commands.Cog):
         if isinstance(error, commands.BadInviteArgument):
             await ctx.send("Invite you are trying to use is invalid or expired")
 
+    async def analytics_add(self, guild_id, user_id, inviter_id, num):
+        if f"{guild_id}.json" not in os.listdir("users/"):
+            users_blank = {}
+            with open(f"users/{guild_id}.json", 'w') as f:
+                json.dump(users_blank, f, indent = 4)
+        with open(f"users/{guild_id}.json", 'r') as f:
+            users = json.load(f)
+
+        if f"{inviter_id}" not in list(users.keys()):
+            users[f"{inviter_id}"] = {}
+            users[f"{inviter_id}"]["NumberOfInvited"] = 0
+        else:
+            users[f"{inviter_id}"]["NumberOfInvited"] += num
+
+        with open(f"users/{guild_id}.json", 'w') as f:
+            json.dump(users, f, indent = 4)
+
+        with open(f"configs/{guild_id}.json", 'r') as f:
+            config = json.load(f)
+
+        if (config["General"]["Analytics"] == True) and (config["General"]["AnalyticsLog"] != 0):
+            guild = self.client.get_guild(guild_id)
+            analytics_channel = self.client.get_channel(config["General"]["AnalyticsLog"])
+            joiner = guild.get_member(user_id)
+            inviter = guild.get_member(inviter_id)
+
+            if users[f"{inviter_id}"]["NumberOfInvited"] == 1:
+                flex = "person"
+            else:
+                flex = "people"
+            embed = self.constructResponseEmbedBase(f"User {joiner.mention} was invited by {inviter.mention}\n{inviter.mention} has altogether invited {users[f'{inviter_id}']['NumberOfInvited']} {flex} 🎉")
+            await analytics_channel.send(embed = embed)
+
+
     def log(self, guild_id, log_msg: str):
         with open('main-config.json', 'r') as f:
             config = json.load(f)
@@ -482,7 +776,7 @@ class Invs(commands.Cog):
             with open(f'{logfile}', 'a') as f:
                 f.write(f"[{datetime.datetime.now()}] [{guild_id}] [INVROLES]: " + log_msg + "\n")
 
-    def checkPerms(self, user_id, guild_id):
+    def checkPerms(self, user_id, guild_id, addscopes = []):
         with open(f'configs/{guild_id}.json', 'r') as f:
             config = json.load(f)
             admin_roles = config['General']['AdminRoles']
@@ -495,12 +789,27 @@ class Invs(commands.Cog):
         guild = self.client.get_guild(guild_id)
         member = guild.get_member(user_id)
 
+        if "owner_only" in addscopes:
+            if user_id == guild.owner_id:
+                return True
+
+        if "owner_users_only" in addscopes:
+            if user_id in owners:
+                return True
+
         if user_id in owners:
             isAble += 1
         if user_id == guild.owner_id:
             isAble += 1
         for role in member.roles:
             if role.id in admin_roles:
+                isAble += 1
+
+        if "admin" in addscopes:
+            if member.guild_permissions.administrator == True:
+                isAble += 1
+        if "manage_guild" in addscopes:
+            if member.guild_permissions.manage_guild == True:
                 isAble += 1
 
         if isAble >= 1:
@@ -519,10 +828,10 @@ class Invs(commands.Cog):
             return False
 
     def constructResponseEmbedBase(self, desc):
-        embed = discord.Embed(title = f"**InviteBot**", description = desc, color = discord.Colour.from_rgb(119, 137, 218))
+        embed = discord.Embed(title = f"**Invitebot**", description = desc, color = discord.Colour.from_rgb(119, 137, 218))
         embed.set_thumbnail(url="https://invitebot.xyz/icons/invitebot-logo.png")
         now = datetime.datetime.now()
-        embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | InviteBot made with \u2764\ufe0f by Nevalicjus")
+        embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | Invitebot made with \u2764\ufe0f by Nevalicjus")
 
         return embed
 
@@ -537,12 +846,12 @@ class Invs(commands.Cog):
             em_color = discord.Colour.from_rgb(67, 181, 129)
         if type in ["member_joined", "inv_rename", "inv_welcome"]:
             em_color = discord.Colour.from_rgb(250, 166, 26)
-        if type in ["inv_deleted", "inv_removed"]:
+        if type in ["inv_deleted", "inv_removed", "inv_used"]:
             em_color = discord.Colour.from_rgb(240, 71, 71)
 
-        embed = discord.Embed(title = f"**InviteBot Logging**", color = em_color)
+        embed = discord.Embed(title = f"**Invitebot Logging**", color = em_color)
         now = datetime.datetime.now()
-        embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | InviteBot made with \u2764\ufe0f by Nevalicjus")
+        embed.set_footer(text = f"{now.strftime('%H:%M')} / {now.strftime('%d/%m/%y')} | Invitebot made with \u2764\ufe0f by Nevalicjus")
 
 
         if type == "inv_created":
@@ -559,6 +868,8 @@ class Invs(commands.Cog):
             embed.add_field(name = "Invite Changed Welcome Message", value = log_msg, inline = False)
         if type == "inv_deleted":
             embed.add_field(name = "Invite Deleted", value = log_msg, inline = False)
+        if type == "inv_used":
+            embed.add_field(name = "Invite marked as 1use Used", value = log_msg, inline = False)
         if type == "inv_removed":
             embed.add_field(name = "Invite-Role Link Removed", value = log_msg, inline = False)
 
