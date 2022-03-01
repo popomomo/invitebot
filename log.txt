@@ -107,3 +107,573 @@ discord.ext.commands.errors.CommandNotFound: Command "listconfig" is not found
 [2022-01-09 12:11:11.621727] [899540938764976178] [OTHER]: Joined new guild - CuttoWinCrypto [899540938764976178]
 [2022-01-09 12:19:20.233788] [899540938764976178] [INVROLES]: User dekpee1985[917496396989464611] joined with invite 9stVxeFk9J
 [2022-01-09 12:19:20.241624] [899540938764976178] [INVROLES]: New Invite fqSwFxBr
+[2022-01-09 13:24:48.599673] [INTERNAL]: InviteBot started
+[2022-01-09 13:24:48.632511] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-09 13:24:48.633261] [INTERNAL]: Status service started
+[2022-01-09 13:24:48.637931] [INTERNAL]: InviteBot ready
+[2022-01-09 15:06:47.716780] [899540938764976178] [INVROLES]: User gagar500[305582972197666817] joined with invite 9stVxeFk9J
+[2022-01-09 15:13:00.638814] [899540938764976178] [INVROLES]: User SKY_Slaean[436559556596858882] joined with invite 9stVxeFk9J
+[2022-01-09 15:21:46.259067] [899540938764976178] [INVROLES]: User amy[348685244322545684] joined with invite 9stVxeFk9J
+[2022-01-09 16:08:25.984484] [899540938764976178] [INVROLES]: User Silp[317678850685272064] joined with invite 9stVxeFk9J
+[2022-01-09 16:27:57.090311] [899540938764976178] [INVROLES]: User Tanthai[441111024930652170] joined with invite y26rTvfC
+[2022-01-09 16:28:23.660932] [899540938764976178] [INVROLES]: User Yok[926889394797965322] joined with invite y26rTvfC
+[2022-01-09 16:35:06.118867] [899540938764976178] [INVROLES]: User jxrita[702067489281933342] joined with invite y26rTvfC
+[2022-01-09 16:38:35.463157] [899540938764976178] [INVROLES]: User Arrive[261521001764880385] joined with invite y26rTvfC
+[2022-01-09 16:49:22.391560] [899540938764976178] [INVROLES]: User srkzsora[311410304145948672] joined with invite y26rTvfC
+[2022-01-09 16:54:00.134825] [899540938764976178] [INVROLES]: User Wit[929779677579579402] joined with invite 9stVxeFk9J
+[2022-01-09 17:34:00.085399] [899540938764976178] [INVROLES]: User ExZeRiuS[188695292562898944] joined with invite 9stVxeFk9J
+[2022-01-09 18:35:59.529226] [899540938764976178] [INVROLES]: User lacto[354845979826061312] joined with invite 9stVxeFk9J
+[2022-01-09 19:16:39.371548] [899540938764976178] [INVROLES]: User rruj[370752394914430978] joined with invite 9stVxeFk9J
+[2022-01-09 19:38:44.716368] [899540938764976178] [INVROLES]: User maymtw[907184123574108221] joined with invite 9stVxeFk9J
+[2022-01-09 22:24:10.612472] [INTERNAL]: InviteBot started
+[2022-01-09 22:24:10.621402] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-09 22:24:10.621593] [INTERNAL]: Status service started
+[2022-01-09 22:24:10.621706] [INTERNAL]: InviteBot ready
+[2022-01-09 22:47:37.411553] [899540938764976178] [INVROLES]: User N.chayapon[928504243676147712] joined with invite 9stVxeFk9J
+[2022-01-10 00:05:20.729779] [899540938764976178] [INVROLES]: User Z - RENDER (โอม) Knight[513364090878558209] joined with invite 6s9Q5bEPSR
+[2022-01-10 00:54:07.803560] [899540938764976178] [INVROLES]: User maxmakung[497790546945900545] joined with invite 9stVxeFk9J
+[2022-01-10 01:20:23.454994] [899540938764976178] [INVROLES]: User Gilasole[370515614437081088] joined with invite 9stVxeFk9J
+[2022-01-10 02:55:07.752906] [899540938764976178] [INVROLES]: User D.[909428347942076476] joined with invite 9stVxeFk9J
+[2022-01-10 04:26:45.191708] [899540938764976178] [INVROLES]: User Adiewsss[908709449273835590] joined with invite 9stVxeFk9J
+[2022-01-10 06:39:50.622367] [899540938764976178] [INVROLES]: User ZSUCEPTY[338002893930102784] joined with invite 9stVxeFk9J
+[2022-01-10 07:13:06.963920] [899540938764976178] [INVROLES]: User bamboo[450890443320852480] joined with invite 9stVxeFk9J
+[2022-01-10 07:45:22.863545] [899540938764976178] [INVROLES]: User Phoon the luckiest miner[298723693838860290] joined with invite 9stVxeFk9J
+[2022-01-10 08:56:19.015646] [899540938764976178] [INVROLES]: User Big-Boy[883369150037237762] joined with invite 9stVxeFk9J
+[2022-01-10 09:23:52.273419] [899540938764976178] [INVROLES]: User chang777[914829976262570004] joined with invite 9stVxeFk9J
+[2022-01-10 09:38:50.324417] [INTERNAL]: InviteBot started
+[2022-01-10 09:38:50.376578] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-10 09:38:50.377352] [INTERNAL]: Status service started
+[2022-01-10 09:38:50.377845] [INTERNAL]: InviteBot ready
+[2022-01-10 10:09:20.740413] [INTERNAL]: InviteBot started
+[2022-01-10 10:09:20.755013] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-10 10:09:20.755206] [INTERNAL]: Status service started
+[2022-01-10 10:09:20.756624] [INTERNAL]: InviteBot ready
+[2022-01-10 12:32:08.568637] [899540938764976178] [INVROLES]: User Water[354603894929752084] joined with invite 6s9Q5bEPSR
+[2022-01-10 12:32:08.569055] [899540938764976178] [INVROLES]: User Water[354603894929752084] joined with invite 9stVxeFk9J
+[2022-01-10 13:53:47.123779] [899540938764976178] [INVROLES]: User arckung[479201529690324992] joined with invite 9stVxeFk9J
+[2022-01-10 13:55:07.563709] [899540938764976178] [INVROLES]: User tanyakorn[875940284016500747] joined with invite 9stVxeFk9J
+[2022-01-10 13:56:01.490935] [899540938764976178] [INVROLES]: User bot5[930097520640684092] joined with invite 6s9Q5bEPSR
+[2022-01-10 16:08:18.118249] [899540938764976178] [INVROLES]: User (แขก)KHAGHR[576628721738448897] joined with invite 9stVxeFk9J
+[2022-01-10 16:16:15.578880] [899540938764976178] [INVROLES]: User OhmStay[319473151828557825] joined with invite 9stVxeFk9J
+[2022-01-10 16:16:22.655367] [899540938764976178] [INVROLES]: User kazekumi[192171676396421120] joined with invite 9stVxeFk9J
+[2022-01-10 16:17:08.135602] [899540938764976178] [INVROLES]: User OnTour[161021742293188608] joined with invite 9stVxeFk9J
+[2022-01-10 16:20:20.090383] [899540938764976178] [INVROLES]: User sukrit1234[278021746748162049] joined with invite 9stVxeFk9J
+[2022-01-10 16:22:26.361564] [899540938764976178] [INVROLES]: Invite YTBmdCnY was created
+[2022-01-10 21:59:09.747568] [INTERNAL]: InviteBot started
+[2022-01-10 21:59:09.756195] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-10 21:59:09.756398] [INTERNAL]: Status service started
+[2022-01-10 21:59:09.756528] [INTERNAL]: InviteBot ready
+[2022-01-11 00:33:38.337113] [899540938764976178] [INVROLES]: User tch[907059563000385586] joined with invite 6s9Q5bEPSR
+[2022-01-11 00:33:38.337793] [899540938764976178] [INVROLES]: User tch[907059563000385586] joined with invite 9stVxeFk9J
+[2022-01-11 21:39:33.126840] [INTERNAL]: InviteBot started
+[2022-01-11 21:39:33.187867] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-11 21:39:33.188120] [INTERNAL]: Status service started
+[2022-01-11 21:39:33.188256] [INTERNAL]: InviteBot ready
+[2022-01-12 02:31:07.938755] [899540938764976178] [INVROLES]: User Thechart001[353918128406921216] joined with invite 6s9Q5bEPSR
+[2022-01-12 02:31:07.940120] [899540938764976178] [INVROLES]: User Thechart001[353918128406921216] joined with invite 9stVxeFk9J
+[2022-01-12 03:24:32.350680] [INTERNAL]: InviteBot started
+[2022-01-12 03:24:32.363607] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-12 03:24:32.363758] [INTERNAL]: Status service started
+[2022-01-12 03:24:32.363859] [INTERNAL]: InviteBot ready
+[2022-01-12 05:05:05.664862] [899540938764976178] [INVROLES]: User PoPStudiO (PoP)[397631090178916353] joined with invite 6s9Q5bEPSR
+[2022-01-12 09:12:33.361553] [INTERNAL]: InviteBot started
+[2022-01-12 09:12:33.479803] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-12 09:12:33.498300] [INTERNAL]: Status service started
+[2022-01-12 09:12:33.498467] [INTERNAL]: InviteBot ready
+[2022-01-12 11:39:45.213001] [899540938764976178] [INVROLES]: User GoOn - Simon | GF[603144050329255939] joined with invite 6s9Q5bEPSR
+[2022-01-12 11:39:45.213497] [899540938764976178] [INVROLES]: User GoOn - Simon | GF[603144050329255939] joined with invite 9stVxeFk9J
+[2022-01-12 16:26:31.386408] [INTERNAL]: InviteBot started
+[2022-01-12 16:26:31.396448] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-12 16:26:31.396648] [INTERNAL]: Status service started
+[2022-01-12 16:26:31.396770] [INTERNAL]: InviteBot ready
+[2022-01-12 18:07:49.981606] [899540938764976178] [INVROLES]: User EstherSnow[802192134747848744] joined with invite 6s9Q5bEPSR
+[2022-01-12 18:07:49.982193] [899540938764976178] [INVROLES]: User EstherSnow[802192134747848744] joined with invite 9stVxeFk9J
+[2022-01-12 20:06:34.034031] [INTERNAL]: InviteBot started
+[2022-01-12 20:06:34.045334] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-12 20:06:34.045515] [INTERNAL]: Status service started
+[2022-01-12 20:06:34.045606] [INTERNAL]: InviteBot ready
+[2022-01-12 23:41:35.036127] [INTERNAL]: InviteBot started
+[2022-01-12 23:41:35.049235] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-12 23:41:35.049387] [INTERNAL]: Status service started
+[2022-01-12 23:41:35.049463] [INTERNAL]: InviteBot ready
+[2022-01-13 01:37:55.156081] [899540938764976178] [INVROLES]: User Nay 800000$[930998150007758888] joined with invite 6s9Q5bEPSR
+[2022-01-13 22:26:41.009955] [INTERNAL]: InviteBot started
+[2022-01-13 22:26:41.021427] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-13 22:26:41.022003] [INTERNAL]: Status service started
+[2022-01-13 22:26:41.022168] [INTERNAL]: InviteBot ready
+[2022-01-13 23:56:39.765532] [INTERNAL]: InviteBot started
+[2022-01-13 23:56:39.781069] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-13 23:56:39.781250] [INTERNAL]: Status service started
+[2022-01-13 23:56:39.781362] [INTERNAL]: InviteBot ready
+[2022-01-14 05:44:39.770185] [899540938764976178] [INVROLES]: User BIG[367526640793944068] joined with invite 6s9Q5bEPSR
+[2022-01-14 05:44:39.770976] [899540938764976178] [INVROLES]: User BIG[367526640793944068] joined with invite 9stVxeFk9J
+[2022-01-14 09:32:12.493525] [INTERNAL]: InviteBot started
+[2022-01-14 09:32:12.522062] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-14 09:32:12.522238] [INTERNAL]: Status service started
+[2022-01-14 09:32:12.522319] [INTERNAL]: InviteBot ready
+[2022-01-14 10:46:45.157513] [INTERNAL]: InviteBot started
+[2022-01-14 10:46:45.212432] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-14 10:46:45.212676] [INTERNAL]: Status service started
+[2022-01-14 10:46:45.212770] [INTERNAL]: InviteBot ready
+[2022-01-14 14:11:34.563554] [899540938764976178] [INVROLES]: User tor[751420375308566641] joined with invite 9stVxeFk9J
+[2022-01-14 22:11:35.183054] [INTERNAL]: InviteBot started
+[2022-01-14 22:11:35.193050] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-14 22:11:35.193263] [INTERNAL]: Status service started
+[2022-01-14 22:11:35.193373] [INTERNAL]: InviteBot ready
+[2022-01-14 22:51:36.547847] [INTERNAL]: InviteBot started
+[2022-01-14 22:51:36.559198] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-14 22:51:36.559496] [INTERNAL]: Status service started
+[2022-01-14 22:51:36.559617] [INTERNAL]: InviteBot ready
+[2022-01-15 08:23:50.616412] [899540938764976178] [INVROLES]: User lnwQ[856876207567929367] joined with invite 9stVxeFk9J
+[2022-01-15 21:11:35.569862] [INTERNAL]: InviteBot started
+[2022-01-15 21:11:35.590227] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-15 21:11:35.590350] [INTERNAL]: Status service started
+[2022-01-15 21:11:35.590412] [INTERNAL]: InviteBot ready
+[2022-01-15 21:23:23.001824] [899540938764976178] [INVROLES]: User ImTotal[243018376342011904] joined with invite 6s9Q5bEPSR
+[2022-01-15 21:23:23.002285] [899540938764976178] [INVROLES]: User ImTotal[243018376342011904] joined with invite 9stVxeFk9J
+[2022-01-15 21:23:23.004509] [899540938764976178] [INVROLES]: New Invite U9BKuf5n
+[2022-01-16 21:11:35.575609] [INTERNAL]: InviteBot started
+[2022-01-16 21:11:35.587572] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-16 21:11:35.587720] [INTERNAL]: Status service started
+[2022-01-16 21:11:35.587795] [INTERNAL]: InviteBot ready
+[2022-01-16 22:26:26.112013] [899540938764976178] [INVROLES]: User Nattapong[932399852598489089] joined with invite 6s9Q5bEPSR
+[2022-01-16 22:26:26.112535] [899540938764976178] [INVROLES]: User Nattapong[932399852598489089] joined with invite 9stVxeFk9J
+[2022-01-16 22:26:26.113078] [899540938764976178] [INVROLES]: User Nattapong[932399852598489089] joined with invite C7rAr8Tr
+[2022-01-16 22:26:26.113413] [899540938764976178] [INVROLES]: User Nattapong[932399852598489089] joined with invite DAZtg5RT
+[2022-01-17 12:26:49.891186] [INTERNAL]: InviteBot started
+[2022-01-17 12:26:49.916931] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-17 12:26:49.921097] [INTERNAL]: Status service started
+[2022-01-17 12:26:49.921244] [INTERNAL]: InviteBot ready
+[2022-01-17 21:14:25.332886] [INTERNAL]: InviteBot started
+[2022-01-17 21:14:25.369544] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-17 21:14:25.369826] [INTERNAL]: Status service started
+[2022-01-17 21:14:25.370091] [INTERNAL]: InviteBot ready
+[2022-01-17 21:48:16.227450] [899540938764976178] [INVROLES]: User ข้าวโอ๊ต[932751964062777405] joined with invite 6s9Q5bEPSR
+[2022-01-17 21:48:16.227881] [899540938764976178] [INVROLES]: User ข้าวโอ๊ต[932751964062777405] joined with invite 9stVxeFk9J
+[2022-01-17 21:48:16.228138] [899540938764976178] [INVROLES]: User ข้าวโอ๊ต[932751964062777405] joined with invite C7rAr8Tr
+[2022-01-17 21:48:16.228487] [899540938764976178] [INVROLES]: New Invite grNnpzZW
+[2022-01-18 01:04:19.781531] [INTERNAL]: InviteBot started
+[2022-01-18 01:04:19.794345] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-18 01:04:19.834973] [INTERNAL]: Status service started
+[2022-01-18 01:04:19.835118] [INTERNAL]: InviteBot ready
+[2022-01-18 23:49:17.164031] [INTERNAL]: InviteBot started
+[2022-01-18 23:49:17.173983] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-18 23:49:17.174132] [INTERNAL]: Status service started
+[2022-01-18 23:49:17.174218] [INTERNAL]: InviteBot ready
+[2022-01-19 01:09:38.401401] [INTERNAL]: InviteBot started
+[2022-01-19 01:09:38.447246] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-19 01:09:38.448626] [INTERNAL]: Status service started
+[2022-01-19 01:09:38.448708] [INTERNAL]: InviteBot ready
+[2022-01-19 01:54:24.829252] [INTERNAL]: InviteBot started
+[2022-01-19 01:54:24.846518] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-19 01:54:24.846723] [INTERNAL]: Status service started
+[2022-01-19 01:54:24.846964] [INTERNAL]: InviteBot ready
+[2022-01-19 03:29:22.409151] [INTERNAL]: InviteBot started
+[2022-01-19 03:29:22.453122] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-19 03:29:22.466527] [INTERNAL]: Status service started
+[2022-01-19 03:29:22.466633] [INTERNAL]: InviteBot ready
+[2022-01-19 03:40:08.399349] [INTERNAL]: InviteBot started
+[2022-01-19 03:40:08.479476] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-19 03:40:08.479712] [INTERNAL]: Status service started
+[2022-01-19 03:40:08.479867] [INTERNAL]: InviteBot ready
+[2022-01-20 01:19:32.455068] [INTERNAL]: InviteBot started
+[2022-01-20 01:19:32.483098] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-20 01:19:32.483699] [INTERNAL]: Status service started
+[2022-01-20 01:19:32.484033] [INTERNAL]: InviteBot ready
+[2022-01-20 22:34:25.319584] [INTERNAL]: InviteBot started
+[2022-01-20 22:34:25.347358] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-20 22:34:25.347523] [INTERNAL]: Status service started
+[2022-01-20 22:34:25.347903] [INTERNAL]: InviteBot ready
+[2022-01-21 01:19:59.368541] [INTERNAL]: InviteBot started
+[2022-01-21 01:19:59.439136] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-21 01:19:59.442858] [INTERNAL]: Status service started
+[2022-01-21 01:19:59.443155] [INTERNAL]: InviteBot ready
+[2022-01-21 19:44:43.200806] [INTERNAL]: InviteBot started
+[2022-01-21 19:44:43.214528] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-21 19:44:43.214752] [INTERNAL]: Status service started
+[2022-01-21 19:44:43.214873] [INTERNAL]: InviteBot ready
+[2022-01-22 14:44:50.537488] [INTERNAL]: InviteBot started
+[2022-01-22 14:44:50.558054] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-22 14:44:50.558220] [INTERNAL]: Status service started
+[2022-01-22 14:44:50.558291] [INTERNAL]: InviteBot ready
+[2022-01-23 00:14:45.929201] [INTERNAL]: InviteBot started
+[2022-01-23 00:14:45.941147] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-23 00:14:45.941291] [INTERNAL]: Status service started
+[2022-01-23 00:14:45.941363] [INTERNAL]: InviteBot ready
+[2022-01-23 15:14:19.621823] [159353114489651200] [INVROLES]: User ppppoomm[428826029768048642] joined with invite UsfHjD9 named Dream Team
+[2022-01-23 23:09:42.555953] [INTERNAL]: InviteBot started
+[2022-01-23 23:09:42.568289] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-23 23:09:42.568499] [INTERNAL]: Status service started
+[2022-01-23 23:09:42.568622] [INTERNAL]: InviteBot ready
+[2022-01-24 13:18:56.751642] [INTERNAL]: InviteBot started
+[2022-01-24 13:18:56.786234] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-24 13:18:56.786659] [INTERNAL]: Status service started
+[2022-01-24 13:18:56.786764] [INTERNAL]: InviteBot ready
+[2022-01-24 22:13:37.087473] [INTERNAL]: InviteBot started
+[2022-01-24 22:13:37.096707] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-24 22:13:37.096823] [INTERNAL]: Status service started
+[2022-01-24 22:13:37.096918] [INTERNAL]: InviteBot ready
+[2022-01-25 20:48:15.303530] [INTERNAL]: InviteBot started
+[2022-01-25 20:48:15.336862] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-25 20:48:15.337049] [INTERNAL]: Status service started
+[2022-01-25 20:48:15.337131] [INTERNAL]: InviteBot ready
+[2022-01-25 21:53:12.392782] [INTERNAL]: InviteBot started
+[2022-01-25 21:53:12.420759] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-25 21:53:12.420954] [INTERNAL]: Status service started
+[2022-01-25 21:53:12.421052] [INTERNAL]: InviteBot ready
+[2022-01-25 23:43:04.817669] [INTERNAL]: InviteBot started
+[2022-01-25 23:43:04.827835] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-25 23:43:04.827996] [INTERNAL]: Status service started
+[2022-01-25 23:43:04.828107] [INTERNAL]: InviteBot ready
+[2022-01-26 04:23:35.493572] [INTERNAL]: InviteBot started
+[2022-01-26 04:23:35.518562] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-26 04:23:35.518689] [INTERNAL]: Status service started
+[2022-01-26 04:23:35.518763] [INTERNAL]: InviteBot ready
+[2022-01-26 05:23:05.187689] [INTERNAL]: InviteBot started
+[2022-01-26 05:23:05.198254] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-26 05:23:05.198441] [INTERNAL]: Status service started
+[2022-01-26 05:23:05.198520] [INTERNAL]: InviteBot ready
+[2022-01-26 08:38:26.643719] [INTERNAL]: InviteBot started
+[2022-01-26 08:38:26.655448] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-26 08:38:26.655582] [INTERNAL]: Status service started
+[2022-01-26 08:38:26.655673] [INTERNAL]: InviteBot ready
+[2022-01-26 23:28:29.456139] [INTERNAL]: InviteBot started
+[2022-01-26 23:28:29.467457] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-26 23:28:29.467634] [INTERNAL]: Status service started
+[2022-01-26 23:28:29.467735] [INTERNAL]: InviteBot ready
+[2022-01-26 23:48:25.731005] [INTERNAL]: InviteBot started
+[2022-01-26 23:48:25.740349] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-26 23:48:25.740518] [INTERNAL]: Status service started
+[2022-01-26 23:48:25.740617] [INTERNAL]: InviteBot ready
+[2022-01-27 02:50:50.108125] [159353114489651200] [INVROLES]: User Mac076[267652406278488064] joined with invite UsfHjD9 named Dream Team
+[2022-01-27 02:50:50.108445] [159353114489651200] [INVROLES]: User Mac076[267652406278488064] joined with invite fhn3Qz4 named Space Pilot
+[2022-01-27 02:50:50.606053] [159353114489651200] [INVROLES]: Found invite roles: ['Space Pilot'] and roles were added
+[2022-01-27 16:32:26.624616] [INTERNAL]: InviteBot started
+[2022-01-27 16:32:26.659785] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-27 16:32:26.664819] [INTERNAL]: Status service started
+[2022-01-27 16:32:26.664950] [INTERNAL]: InviteBot ready
+[2022-01-27 23:02:18.391787] [INTERNAL]: InviteBot started
+[2022-01-27 23:02:18.404916] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-27 23:02:18.405628] [INTERNAL]: Status service started
+[2022-01-27 23:02:18.405746] [INTERNAL]: InviteBot ready
+[2022-01-28 03:02:13.795789] [INTERNAL]: InviteBot started
+[2022-01-28 03:02:13.808854] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-28 03:02:13.812137] [INTERNAL]: Status service started
+[2022-01-28 03:02:13.812366] [INTERNAL]: InviteBot ready
+[2022-01-28 07:37:12.875420] [INTERNAL]: InviteBot started
+[2022-01-28 07:37:12.886840] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-28 07:37:12.887012] [INTERNAL]: Status service started
+[2022-01-28 07:37:12.887118] [INTERNAL]: InviteBot ready
+[2022-01-29 06:22:16.663902] [INTERNAL]: InviteBot started
+[2022-01-29 06:22:16.688617] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-29 06:22:16.688830] [INTERNAL]: Status service started
+[2022-01-29 06:22:16.688901] [INTERNAL]: InviteBot ready
+[2022-01-29 13:27:14.337049] [INTERNAL]: InviteBot started
+[2022-01-29 13:27:14.348417] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-29 13:27:14.348613] [INTERNAL]: Status service started
+[2022-01-29 13:27:14.348706] [INTERNAL]: InviteBot ready
+[2022-01-29 15:47:50.886103] [159353114489651200] [INVROLES]: User Mac076[267652406278488064] joined with invite fhn3Qz4 named Space Pilot
+[2022-01-29 15:47:51.327280] [159353114489651200] [INVROLES]: Found invite roles: ['Space Pilot'] and roles were added
+[2022-01-30 04:18:32.536740] [INTERNAL]: InviteBot started
+[2022-01-30 04:18:32.562131] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-30 04:18:32.562326] [INTERNAL]: Status service started
+[2022-01-30 04:18:32.562715] [INTERNAL]: InviteBot ready
+[2022-01-30 16:28:29.712945] [INTERNAL]: InviteBot started
+[2022-01-30 16:28:29.734999] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-30 16:28:29.735163] [INTERNAL]: Status service started
+[2022-01-30 16:28:29.735248] [INTERNAL]: InviteBot ready
+[2022-01-31 04:53:26.227091] [INTERNAL]: InviteBot started
+[2022-01-31 04:53:26.237957] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-01-31 04:53:26.238104] [INTERNAL]: Status service started
+[2022-01-31 04:53:26.238210] [INTERNAL]: InviteBot ready
+[2022-02-01 02:03:26.364543] [INTERNAL]: InviteBot started
+[2022-02-01 02:03:26.374588] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-01 02:03:26.374740] [INTERNAL]: Status service started
+[2022-02-01 02:03:26.374835] [INTERNAL]: InviteBot ready
+[2022-02-02 01:12:40.300934] [INTERNAL]: InviteBot started
+[2022-02-02 01:12:40.311230] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-02 01:12:40.311439] [INTERNAL]: Status service started
+[2022-02-02 01:12:40.311501] [INTERNAL]: InviteBot ready
+[2022-02-02 22:23:53.849688] [INTERNAL]: InviteBot started
+[2022-02-02 22:23:53.863389] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-02 22:23:53.863579] [INTERNAL]: Status service started
+[2022-02-02 22:23:53.863685] [INTERNAL]: InviteBot ready
+[2022-02-03 04:44:08.946094] [INTERNAL]: InviteBot started
+[2022-02-03 04:44:08.988879] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-03 04:44:08.989768] [INTERNAL]: Status service started
+[2022-02-03 04:44:08.989887] [INTERNAL]: InviteBot ready
+[2022-02-03 07:03:52.586636] [INTERNAL]: InviteBot started
+[2022-02-03 07:03:52.597678] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-03 07:03:52.597807] [INTERNAL]: Status service started
+[2022-02-03 07:03:52.597894] [INTERNAL]: InviteBot ready
+[2022-02-04 00:53:15.826900] [INTERNAL]: InviteBot started
+[2022-02-04 00:53:15.905418] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-04 00:53:15.906099] [INTERNAL]: Status service started
+[2022-02-04 00:53:15.906263] [INTERNAL]: InviteBot ready
+[2022-02-04 03:17:44.218969] [INTERNAL]: InviteBot started
+[2022-02-04 03:17:44.228240] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-04 03:17:44.228442] [INTERNAL]: Status service started
+[2022-02-04 03:17:44.228562] [INTERNAL]: InviteBot ready
+[2022-02-04 06:27:45.832274] [INTERNAL]: InviteBot started
+[2022-02-04 06:27:45.858124] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-04 06:27:45.858289] [INTERNAL]: Status service started
+[2022-02-04 06:27:45.858420] [INTERNAL]: InviteBot ready
+[2022-02-05 04:02:45.147540] [INTERNAL]: InviteBot started
+[2022-02-05 04:02:45.161942] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-05 04:02:45.162081] [INTERNAL]: Status service started
+[2022-02-05 04:02:45.162179] [INTERNAL]: InviteBot ready
+[2022-02-05 17:08:30.974893] [INTERNAL]: InviteBot started
+[2022-02-05 17:08:31.005453] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-05 17:08:31.005652] [INTERNAL]: Status service started
+[2022-02-05 17:08:31.007008] [INTERNAL]: InviteBot ready
+[2022-02-06 05:39:37.480277] [INTERNAL]: InviteBot started
+[2022-02-06 05:39:37.620318] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-06 05:39:37.620520] [INTERNAL]: Status service started
+[2022-02-06 05:39:37.620592] [INTERNAL]: InviteBot ready
+[2022-02-06 08:13:34.070544] [INTERNAL]: InviteBot started
+[2022-02-06 08:13:34.088904] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-06 08:13:34.089054] [INTERNAL]: Status service started
+[2022-02-06 08:13:34.089154] [INTERNAL]: InviteBot ready
+[2022-02-06 10:15:24.081330] [159353114489651200] [INVROLES]: User Accoustic6[305621694788141056] joined with invite fhn3Qz4 named Space Pilot
+[2022-02-06 10:15:24.418780] [159353114489651200] [INVROLES]: Found invite roles: ['Space Pilot'] and roles were added
+[2022-02-06 19:33:29.818381] [INTERNAL]: InviteBot started
+[2022-02-06 19:33:29.833320] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-06 19:33:29.833520] [INTERNAL]: Status service started
+[2022-02-06 19:33:29.833603] [INTERNAL]: InviteBot ready
+[2022-02-07 10:08:37.381832] [INTERNAL]: InviteBot started
+[2022-02-07 10:08:37.406330] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-07 10:08:37.406489] [INTERNAL]: Status service started
+[2022-02-07 10:08:37.406565] [INTERNAL]: InviteBot ready
+[2022-02-07 17:49:09.813775] [INTERNAL]: InviteBot started
+[2022-02-07 17:49:09.847186] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-07 17:49:09.847507] [INTERNAL]: Status service started
+[2022-02-07 17:49:09.848103] [INTERNAL]: InviteBot ready
+[2022-02-08 01:13:54.746594] [INTERNAL]: InviteBot started
+[2022-02-08 01:13:54.759899] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-08 01:13:54.760073] [INTERNAL]: Status service started
+[2022-02-08 01:13:54.760143] [INTERNAL]: InviteBot ready
+[2022-02-08 06:28:53.800097] [INTERNAL]: InviteBot started
+[2022-02-08 06:28:53.814831] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-08 06:28:53.815106] [INTERNAL]: Status service started
+[2022-02-08 06:28:53.815223] [INTERNAL]: InviteBot ready
+[2022-02-09 22:51:29.866755] [INTERNAL]: InviteBot started
+[2022-02-09 22:51:29.886440] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-09 22:51:29.886628] [INTERNAL]: Status service started
+[2022-02-09 22:51:29.886745] [INTERNAL]: InviteBot ready
+[2022-02-10 01:21:25.635859] [INTERNAL]: InviteBot started
+[2022-02-10 01:21:25.648239] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-10 01:21:25.648844] [INTERNAL]: Status service started
+[2022-02-10 01:21:25.649079] [INTERNAL]: InviteBot ready
+[2022-02-10 06:01:30.120413] [INTERNAL]: InviteBot started
+[2022-02-10 06:01:30.155029] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-10 06:01:30.155257] [INTERNAL]: Status service started
+[2022-02-10 06:01:30.155334] [INTERNAL]: InviteBot ready
+[2022-02-10 17:41:35.758962] [INTERNAL]: InviteBot started
+[2022-02-10 17:41:35.807379] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-10 17:41:35.808734] [INTERNAL]: Status service started
+[2022-02-10 17:41:35.808813] [INTERNAL]: InviteBot ready
+[2022-02-10 17:51:28.066689] [INTERNAL]: InviteBot started
+[2022-02-10 17:51:28.083555] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-10 17:51:28.083872] [INTERNAL]: Status service started
+[2022-02-10 17:51:28.084048] [INTERNAL]: InviteBot ready
+[2022-02-11 04:36:25.518641] [INTERNAL]: InviteBot started
+[2022-02-11 04:36:25.531656] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-11 04:36:25.531910] [INTERNAL]: Status service started
+[2022-02-11 04:36:25.532034] [INTERNAL]: InviteBot ready
+[2022-02-11 21:41:24.222297] [INTERNAL]: InviteBot started
+[2022-02-11 21:41:24.233331] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-11 21:41:24.233474] [INTERNAL]: Status service started
+[2022-02-11 21:41:24.233588] [INTERNAL]: InviteBot ready
+[2022-02-12 19:11:10.552756] [INTERNAL]: InviteBot started
+[2022-02-12 19:11:10.563520] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-12 19:11:10.563669] [INTERNAL]: Status service started
+[2022-02-12 19:11:10.563742] [INTERNAL]: InviteBot ready
+[2022-02-13 03:11:11.804386] [INTERNAL]: InviteBot started
+[2022-02-13 03:11:11.814955] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-13 03:11:11.815147] [INTERNAL]: Status service started
+[2022-02-13 03:11:11.815243] [INTERNAL]: InviteBot ready
+[2022-02-14 00:11:14.955093] [INTERNAL]: InviteBot started
+[2022-02-14 00:11:14.970684] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-14 00:11:14.970830] [INTERNAL]: Status service started
+[2022-02-14 00:11:14.970904] [INTERNAL]: InviteBot ready
+[2022-02-14 05:27:25.120564] [INTERNAL]: InviteBot started
+[2022-02-14 05:27:25.153328] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-14 05:27:25.153489] [INTERNAL]: Status service started
+[2022-02-14 05:27:25.153606] [INTERNAL]: InviteBot ready
+[2022-02-14 13:55:50.750418] [INTERNAL]: InviteBot started
+[2022-02-14 13:55:50.799162] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-14 13:55:50.799322] [INTERNAL]: Status service started
+[2022-02-14 13:55:50.799429] [INTERNAL]: InviteBot ready
+[2022-02-15 03:28:28.350016] [INTERNAL]: InviteBot started
+[2022-02-15 03:28:28.362174] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-15 03:28:28.362304] [INTERNAL]: Status service started
+[2022-02-15 03:28:28.362357] [INTERNAL]: InviteBot ready
+[2022-02-15 06:48:01.537297] [INTERNAL]: InviteBot started
+[2022-02-15 06:48:01.549830] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-15 06:48:01.550012] [INTERNAL]: Status service started
+[2022-02-15 06:48:01.550121] [INTERNAL]: InviteBot ready
+[2022-02-15 22:03:16.584700] [INTERNAL]: InviteBot started
+[2022-02-15 22:03:16.601362] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-15 22:03:16.602031] [INTERNAL]: Status service started
+[2022-02-15 22:03:16.602092] [INTERNAL]: InviteBot ready
+[2022-02-16 00:33:03.054665] [INTERNAL]: InviteBot started
+[2022-02-16 00:33:03.063169] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-16 00:33:03.063346] [INTERNAL]: Status service started
+[2022-02-16 00:33:03.063414] [INTERNAL]: InviteBot ready
+[2022-02-16 03:08:06.077893] [INTERNAL]: InviteBot started
+[2022-02-16 03:08:06.088435] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-16 03:08:06.088578] [INTERNAL]: Status service started
+[2022-02-16 03:08:06.088636] [INTERNAL]: InviteBot ready
+[2022-02-17 01:13:59.466387] [INTERNAL]: InviteBot started
+[2022-02-17 01:13:59.496359] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-17 01:13:59.496489] [INTERNAL]: Status service started
+[2022-02-17 01:13:59.496552] [INTERNAL]: InviteBot ready
+[2022-02-17 03:49:37.229925] [INTERNAL]: InviteBot started
+[2022-02-17 03:49:37.308874] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-17 03:49:37.309116] [INTERNAL]: Status service started
+[2022-02-17 03:49:37.317696] [INTERNAL]: InviteBot ready
+[2022-02-17 06:43:38.816020] [INTERNAL]: InviteBot started
+[2022-02-17 06:43:38.829125] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-17 06:43:38.829258] [INTERNAL]: Status service started
+[2022-02-17 06:43:38.829347] [INTERNAL]: InviteBot ready
+[2022-02-17 18:08:58.035926] [INTERNAL]: InviteBot started
+[2022-02-17 18:08:58.063040] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-17 18:08:58.063191] [INTERNAL]: Status service started
+[2022-02-17 18:08:58.063256] [INTERNAL]: InviteBot ready
+[2022-02-18 03:04:09.343718] [INTERNAL]: InviteBot started
+[2022-02-18 03:04:09.406537] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-18 03:04:09.406699] [INTERNAL]: Status service started
+[2022-02-18 03:04:09.406768] [INTERNAL]: InviteBot ready
+[2022-02-18 07:38:56.493818] [INTERNAL]: InviteBot started
+[2022-02-18 07:38:56.556189] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-18 07:38:56.556387] [INTERNAL]: Status service started
+[2022-02-18 07:38:56.556456] [INTERNAL]: InviteBot ready
+[2022-02-18 11:26:03.841803] [INTERNAL]: InviteBot started
+[2022-02-18 11:26:03.883843] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-18 11:26:03.883970] [INTERNAL]: Status service started
+[2022-02-18 11:26:03.884023] [INTERNAL]: InviteBot ready
+[2022-02-18 19:19:13.238327] [INTERNAL]: InviteBot started
+[2022-02-18 19:19:13.246205] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-18 19:19:13.246328] [INTERNAL]: Status service started
+[2022-02-18 19:19:13.246414] [INTERNAL]: InviteBot ready
+[2022-02-19 01:19:32.452128] [INTERNAL]: InviteBot started
+[2022-02-19 01:19:32.476860] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-19 01:19:32.477119] [INTERNAL]: Status service started
+[2022-02-19 01:19:32.477202] [INTERNAL]: InviteBot ready
+[2022-02-19 10:00:03.965757] [INTERNAL]: InviteBot started
+[2022-02-19 10:00:03.998439] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-19 10:00:03.998596] [INTERNAL]: Status service started
+[2022-02-19 10:00:03.998652] [INTERNAL]: InviteBot ready
+[2022-02-19 10:09:17.913764] [INTERNAL]: InviteBot started
+[2022-02-19 10:09:17.932898] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-19 10:09:17.933096] [INTERNAL]: Status service started
+[2022-02-19 10:09:17.933174] [INTERNAL]: InviteBot ready
+[2022-02-19 22:44:18.573291] [INTERNAL]: InviteBot started
+[2022-02-19 22:44:18.589076] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-19 22:44:18.589258] [INTERNAL]: Status service started
+[2022-02-19 22:44:18.589393] [INTERNAL]: InviteBot ready
+[2022-02-20 17:04:56.421087] [INTERNAL]: InviteBot started
+[2022-02-20 17:04:56.431392] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-20 17:04:56.431619] [INTERNAL]: Status service started
+[2022-02-20 17:04:56.431720] [INTERNAL]: InviteBot ready
+[2022-02-21 03:39:32.487339] [INTERNAL]: InviteBot started
+[2022-02-21 03:39:32.528635] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-21 03:39:32.528854] [INTERNAL]: Status service started
+[2022-02-21 03:39:32.528966] [INTERNAL]: InviteBot ready
+[2022-02-21 03:59:38.597148] [INTERNAL]: InviteBot started
+[2022-02-21 03:59:38.614263] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-21 03:59:38.614417] [INTERNAL]: Status service started
+[2022-02-21 03:59:38.614503] [INTERNAL]: InviteBot ready
+[2022-02-21 13:34:33.829580] [INTERNAL]: InviteBot started
+[2022-02-21 13:34:33.854101] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-21 13:34:33.854475] [INTERNAL]: Status service started
+[2022-02-21 13:34:33.854672] [INTERNAL]: InviteBot ready
+[2022-02-22 03:49:49.966978] [INTERNAL]: InviteBot started
+[2022-02-22 03:49:50.024768] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-22 03:49:50.024963] [INTERNAL]: Status service started
+[2022-02-22 03:49:50.025035] [INTERNAL]: InviteBot ready
+[2022-02-22 13:04:30.083736] [INTERNAL]: InviteBot started
+[2022-02-22 13:04:30.094841] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-22 13:04:30.095107] [INTERNAL]: Status service started
+[2022-02-22 13:04:30.095261] [INTERNAL]: InviteBot ready
+[2022-02-23 02:57:25.886053] [INTERNAL]: InviteBot started
+[2022-02-23 02:57:25.897056] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-23 02:57:25.897195] [INTERNAL]: Status service started
+[2022-02-23 02:57:25.897267] [INTERNAL]: InviteBot ready
+[2022-02-24 03:00:05.058924] [INTERNAL]: InviteBot started
+[2022-02-24 03:00:05.155976] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-24 03:00:05.156173] [INTERNAL]: Status service started
+[2022-02-24 03:00:05.156247] [INTERNAL]: InviteBot ready
+[2022-02-24 06:19:41.692222] [INTERNAL]: InviteBot started
+[2022-02-24 06:19:41.739555] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-24 06:19:41.740042] [INTERNAL]: Status service started
+[2022-02-24 06:19:41.740552] [INTERNAL]: InviteBot ready
+[2022-02-25 01:20:54.276567] [INTERNAL]: InviteBot started
+[2022-02-25 01:20:54.286523] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-25 01:20:54.286696] [INTERNAL]: Status service started
+[2022-02-25 01:20:54.286802] [INTERNAL]: InviteBot ready
+[2022-02-25 21:48:38.452237] [INTERNAL]: InviteBot started
+[2022-02-25 21:48:38.506729] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-25 21:48:38.506877] [INTERNAL]: Status service started
+[2022-02-25 21:48:38.506946] [INTERNAL]: InviteBot ready
+[2022-02-26 01:35:49.071226] [INTERNAL]: InviteBot started
+[2022-02-26 01:35:49.106850] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-26 01:35:49.107142] [INTERNAL]: Status service started
+[2022-02-26 01:35:49.107257] [INTERNAL]: InviteBot ready
+[2022-02-26 08:55:03.746242] [INTERNAL]: InviteBot started
+[2022-02-26 08:55:03.864570] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-26 08:55:03.868058] [INTERNAL]: Status service started
+[2022-02-26 08:55:03.868246] [INTERNAL]: InviteBot ready
+[2022-02-26 12:48:28.064697] [INTERNAL]: InviteBot started
+[2022-02-26 12:48:28.078748] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-26 12:48:28.078897] [INTERNAL]: Status service started
+[2022-02-26 12:48:28.078973] [INTERNAL]: InviteBot ready
+[2022-02-26 16:59:06.564351] [INTERNAL]: InviteBot started
+[2022-02-26 16:59:06.771886] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-26 16:59:06.772105] [INTERNAL]: Status service started
+[2022-02-26 16:59:06.772183] [INTERNAL]: InviteBot ready
+[2022-02-26 21:44:11.618976] [INTERNAL]: InviteBot started
+[2022-02-26 21:44:11.700064] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-26 21:44:11.700214] [INTERNAL]: Status service started
+[2022-02-26 21:44:11.700298] [INTERNAL]: InviteBot ready
+[2022-02-26 23:08:44.157501] [INTERNAL]: InviteBot started
+[2022-02-26 23:08:44.175324] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-26 23:08:44.175510] [INTERNAL]: Status service started
+[2022-02-26 23:08:44.175637] [INTERNAL]: InviteBot ready
+[2022-02-27 00:43:56.824429] [INTERNAL]: InviteBot started
+[2022-02-27 00:43:56.844085] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-27 00:43:56.844754] [INTERNAL]: Status service started
+[2022-02-27 00:43:56.845302] [INTERNAL]: InviteBot ready
+[2022-02-27 01:09:00.550199] [INTERNAL]: InviteBot started
+[2022-02-27 01:09:00.589101] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-27 01:09:00.589278] [INTERNAL]: Status service started
+[2022-02-27 01:09:00.589335] [INTERNAL]: InviteBot ready
+[2022-02-27 07:54:10.775182] [INTERNAL]: InviteBot started
+[2022-02-27 07:54:10.839626] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-27 07:54:10.840169] [INTERNAL]: Status service started
+[2022-02-27 07:54:10.841398] [INTERNAL]: InviteBot ready
+[2022-02-27 21:27:09.350659] [INTERNAL]: InviteBot started
+[2022-02-27 21:27:09.373202] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-27 21:27:09.375842] [INTERNAL]: Status service started
+[2022-02-27 21:27:09.376009] [INTERNAL]: InviteBot ready
+[2022-02-28 00:21:57.004477] [INTERNAL]: InviteBot started
+[2022-02-28 00:21:57.044822] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-28 00:21:57.045007] [INTERNAL]: Status service started
+[2022-02-28 00:21:57.045072] [INTERNAL]: InviteBot ready
+[2022-02-28 19:12:18.355491] [INTERNAL]: InviteBot started
+[2022-02-28 19:12:18.370413] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-02-28 19:12:18.370528] [INTERNAL]: Status service started
+[2022-02-28 19:12:18.370594] [INTERNAL]: InviteBot ready
+[2022-03-01 00:02:26.681235] [INTERNAL]: InviteBot started
+[2022-03-01 00:02:26.703143] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-03-01 00:02:26.703403] [INTERNAL]: Status service started
+[2022-03-01 00:02:26.703498] [INTERNAL]: InviteBot ready
+[2022-03-01 01:27:27.397789] [INTERNAL]: InviteBot started
+[2022-03-01 01:27:27.413109] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-03-01 01:27:27.413436] [INTERNAL]: Status service started
+[2022-03-01 01:27:27.413615] [INTERNAL]: InviteBot ready
+[2022-03-01 06:12:36.696108] [INTERNAL]: InviteBot started
+[2022-03-01 06:12:36.788228] [INTERNAL]: Cogs named: errors other invs owner  were loaded
+[2022-03-01 06:12:36.788415] [INTERNAL]: Status service started
+[2022-03-01 06:12:36.788527] [INTERNAL]: InviteBot ready
+[2022-03-01 07:47:14.741351] [159353114489651200] [INVROLES]: User mikomiko[690041481452322824] joined with invite fhn3Qz4 named Space Pilot
