@@ -11,7 +11,8 @@
             "name": "BGN",
             "roles": [],
             "uses": 0,
-            "welcome": "None"
+            "welcome": "None",
+            "tags": {}
         }
     }
 }

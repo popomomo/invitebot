@@ -131,8 +131,6 @@ class Other(commands.Cog):
                 saved_config = json.load(f)
 
             embed = discord.Embed(title = f"**Saved Config\n{fetched_config[17:19]}:{fetched_config[14:16]}:{fetched_config[11:13]} | {fetched_config[8:10]}/{fetched_config[5:7]}/{fetched_config[0:4]}**", timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-            embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-            embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
 
             for setting in saved_config["General"]:
                 embed.add_field(name = f"{setting}:", value = f"{saved_config['General'][setting]}", inline = False)
@@ -140,8 +138,6 @@ class Other(commands.Cog):
             await ctx.send(embed = embed)
 
             embed = discord.Embed(title = f"**Saved Config's Invites\n{fetched_config[17:19]}:{fetched_config[14:16]}:{fetched_config[11:13]} | {fetched_config[8:10]}/{fetched_config[5:7]}/{fetched_config[0:4]}**", timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-            embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-            embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
 
             no_fields = 0
             for inv in saved_config["Invites"]:
@@ -173,8 +169,6 @@ class Other(commands.Cog):
                 config = json.load(f)
 
             embed = discord.Embed(title = "**Current Config**", timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-            embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-            embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
 
             for setting in config["General"]:
                 embed.add_field(name = f"{setting}:", value = f"{config['General'][setting]}", inline = False)
@@ -182,8 +176,6 @@ class Other(commands.Cog):
             await ctx.send(embed = embed)
 
             embed = discord.Embed(title = "**Current Config's Invites**", timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-            embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-            embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
 
             no_fields = 0
             for inv in config["Invites"]:
@@ -214,8 +206,6 @@ class Other(commands.Cog):
             os.system(f"cd {os.getenv('PWD')}/saved-configs/ && mkdir {ctx.guild.id}")
 
         embed = discord.Embed(title = "**Saved Configs**", timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-        embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-        embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
         embed.add_field(name = "Config 0", value = "Currently used Config", inline = False)
 
         i = 0
@@ -716,8 +706,6 @@ class Other(commands.Cog):
             await ctx.message.delete(delay = 3)
 
         embed = discord.Embed(title = "**Invitebot Help**", timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-        embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-        embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
 
         if self.checkPerms(ctx.author.id, ctx.guild.id, ["admin", "manage_guild"]) is False:
             embed.add_field(name = "i!**invite**", value = "Sends you the bot invite", inline = False)
@@ -794,8 +782,6 @@ class Other(commands.Cog):
             await ctx.message.delete(delay = 3)
 
         embed = discord.Embed(title = "**Invitebot Help**", timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-        embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-        embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
 
         embed.add_field(name = "i!**invite**", value = "Sends you the bot's invite", inline = False)
         embed.add_field(name = "i!**help**", value = "Sends you the bot's help page", inline = False)
@@ -899,8 +885,6 @@ class Other(commands.Cog):
 
     def constructResponseEmbedBase(self, desc):
         embed = discord.Embed(title = "**Invitebot**", description = desc, timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-        embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-        embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
         return embed
 
     async def serverLog(self, guild_id, log_type, log_msg):
@@ -918,7 +902,6 @@ class Other(commands.Cog):
             em_color = discord.Colour.from_rgb(240, 71, 71)
 
         embed = discord.Embed(title = "**Invitebot Logging**", timestamp = datetime.datetime.utcnow(), color = em_color)
-        embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
 
         if log_type == "mod_added":
             embed.add_field(name = "Admin Role Added", value = log_msg, inline = False)

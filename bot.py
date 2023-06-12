@@ -111,7 +111,6 @@ async def status_task():
         
 WHEN = datetime.time(3, 0, 0)  # 6:00 PM
 channel_id = 829651715502374982 # Put your channel id here
-channel_id2 = 936297277679611985 # CWC channel
 
 async def called_once_a_day():  # Fired every day
     await client.wait_until_ready()  # Make sure your guild cache is ready so the channel can be found via get_channel
@@ -124,18 +123,6 @@ async def called_once_a_day():  # Fired every day
               return await channel.send('Could not download file...')
           data = io.BytesIO(await resp.read())
           await channel.send(file=discord.File(data, 'fear-and-greed-index.png'))
-
-async def called_once_a_day2():  # Fired every day
-    await client.wait_until_ready()  # Make sure your guild cache is ready so the channel can be found via get_channel
-    channel2 = client.get_channel(channel_id2)
-    
-    fngUrl2 = "https://alternative.me/crypto/fear-and-greed-index.png"
-    async with aiohttp.ClientSession() as session:
-      async with session.get(fngUrl2) as resp:
-          if resp.status != 200:
-              return await channel2.send('Could not download file...')
-          data = io.BytesIO(await resp.read())
-          await channel2.send(file=discord.File(data, 'fear-and-greed-index.png'))
 
 async def background_task():
     now = datetime.datetime.utcnow()

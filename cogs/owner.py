@@ -46,7 +46,6 @@ class Owner(commands.Cog):
             embed.add_field(name = "**Banner URL**", value = guild.banner_url, inline = True)
         if guild.description is not None:
             embed.add_field(name = "**Guild Description**", value = guild.description, inline = True)
-        embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
         await ctx.send(embed = embed)
 
     @commands.command()
@@ -257,8 +256,6 @@ class Owner(commands.Cog):
 
     def constructResponseEmbedBase(self, desc):
         embed = discord.Embed(title = "**Invitebot**", description = desc, timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-        embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-        embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
         return embed
 
 def setup(client):

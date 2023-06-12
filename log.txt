@@ -7951,3 +7951,77 @@ Traceback (most recent call last):
   File "/home/runner/invitebot/cogs/invs.py", line 499, in list
     if "1use" in list(invites['Invites'][f"{inv}"]["tags"].keys()):
 KeyError: 'tags'
+[2023-05-24 19:15:54.790982] [INTERNAL]: Invitebot started
+[2023-05-24 19:15:54.907321] [INTERNAL]: Cogs named: errors invs other owner were loaded
+[2023-05-24 19:15:54.907526] [INTERNAL]: Status service started
+[2023-05-24 19:15:54.907729] [INTERNAL]: Invitebot ready
+[2023-05-26 00:58:38.795084] [INTERNAL]: Invitebot started
+[2023-05-26 00:58:38.875523] [INTERNAL]: Cogs named: errors invs other owner were loaded
+[2023-05-26 00:58:38.875769] [INTERNAL]: Status service started
+[2023-05-26 00:58:38.875902] [INTERNAL]: Invitebot ready
+[2023-05-26 05:49:06.567977] [159353114489651200] [GLOBAL-ERR-HANDLR]: Ignoring exception that happened in Dream Team
+ in command list, which was run by pOpO[122756829964009472]:
+Traceback (most recent call last):
+  File "/home/runner/invitebot/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 85, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/runner/invitebot/cogs/invs.py", line 533, in list
+    if self.checkInvos(ctx.guild.id) == 1:
+  File "/home/runner/invitebot/cogs/invs.py", line 879, in checkInvos
+    config = json.load(f)
+  File "/nix/store/5g6y3nzq80fkq54ahan2slc57j6327nj-python3-3.8.15/lib/python3.8/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/nix/store/5g6y3nzq80fkq54ahan2slc57j6327nj-python3-3.8.15/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/5g6y3nzq80fkq54ahan2slc57j6327nj-python3-3.8.15/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/5g6y3nzq80fkq54ahan2slc57j6327nj-python3-3.8.15/lib/python3.8/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 17 column 13 (char 369)
+[2023-05-26 05:49:57.925950] [159353114489651200] [GLOBAL-ERR-HANDLR]: Ignoring exception that happened in Dream Team
+ in command help, which was run by pOpO[122756829964009472]:
+Traceback (most recent call last):
+  File "/home/runner/invitebot/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 85, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/runner/invitebot/cogs/other.py", line 715, in help
+    if self.checkInvos(ctx.guild.id) == 1:
+  File "/home/runner/invitebot/cogs/other.py", line 886, in checkInvos
+    config = json.load(f)
+  File "/nix/store/5g6y3nzq80fkq54ahan2slc57j6327nj-python3-3.8.15/lib/python3.8/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/nix/store/5g6y3nzq80fkq54ahan2slc57j6327nj-python3-3.8.15/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/nix/store/5g6y3nzq80fkq54ahan2slc57j6327nj-python3-3.8.15/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/nix/store/5g6y3nzq80fkq54ahan2slc57j6327nj-python3-3.8.15/lib/python3.8/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 17 column 13 (char 369)
+[2023-05-26 05:54:00.090559] [159353114489651200] [INVROLES]: pOpO#6510[122756829964009472] tried to add role ip Friends to non-existent in db invite, so it was created with starting role ip Friends
+[2023-05-26 05:55:00.627448] [159353114489651200] [GLOBAL-ERR-HANDLR]: Ignoring exception that happened in Dream Team
+ in command None, which was run by pOpO[122756829964009472]:
+discord.ext.commands.errors.CommandNotFound: Command "del" is not found
+[2023-05-26 05:58:57.564029] [159353114489651200] [INVROLES]: <@122756829964009472>[122756829964009472] renamed invite 5VyVP9R3Xy from None to ipon
+[2023-05-26 05:59:14.179998] [159353114489651200] [INVROLES]: <@122756829964009472>[122756829964009472] renamed invite sX6ZzNZjyX from None to Overwatch
+[2023-06-08 04:06:07.130323] [INTERNAL]: Invitebot started
+[2023-06-08 04:06:07.305976] [INTERNAL]: Cogs named: errors other owner invs were loaded
+[2023-06-08 04:06:07.306170] [INTERNAL]: Status service started
+[2023-06-08 04:06:07.306300] [INTERNAL]: Invitebot ready
+[2023-06-12 04:18:06.426405] [INTERNAL]: Invitebot started
+[2023-06-12 04:18:06.506182] [INTERNAL]: Cogs named: errors other owner invs were loaded
+[2023-06-12 04:18:06.506406] [INTERNAL]: Status service started
+[2023-06-12 04:18:06.506551] [INTERNAL]: Invitebot ready
+[2023-06-12 05:44:01.678012] [159353114489651200] [INVROLES]: User mOmO[702377648072032286] joined with invite 5VyVP9R3Xy named ipon
+[2023-06-12 05:44:01.934234] [159353114489651200] [INVROLES]: Found invite roles: ['ip Friends'] and roles were added
+[2023-06-12 05:45:21.408787] [159353114489651200] [INVROLES]: User mOmO[702377648072032286] joined with invite 5VyVP9R3Xy named ipon
+[2023-06-12 05:45:21.917396] [159353114489651200] [INVROLES]: Found invite roles: ['ip Friends'] and roles were added
+[2023-06-12 05:50:48.682252] [159353114489651200] [INVROLES]: Invite KvhjrenF was created
+[2023-06-12 05:51:16.007902] [159353114489651200] [INVROLES]: User mOmO[702377648072032286] joined with invite FSum4HtYmx named BGN
+[2023-06-12 05:51:16.341271] [159353114489651200] [INVROLES]: Found invite roles: ['Dream Team'] and roles were added
+[2023-06-12 05:51:46.382957] [159353114489651200] [INVROLES]: User mOmO[702377648072032286] joined with invite fhn3Qz4 named Space Pilot
+[2023-06-12 05:51:46.970483] [159353114489651200] [INVROLES]: Found invite roles: ['Space Pilot'] and roles were added
+[2023-06-12 05:52:17.359786] [159353114489651200] [INVROLES]: Invite KvhjrenF was deleted
+[2023-06-12 05:52:20.747574] [159353114489651200] [INVROLES]: Invite yqv4qQfk was created
+[2023-06-12 05:52:30.663914] [159353114489651200] [INVROLES]: Invite yqv4qQfk was deleted
+[2023-06-12 05:53:58.583030] [159353114489651200] [INVROLES]: User mOmO[702377648072032286] joined with invite fhn3Qz4 named Space Pilot
+[2023-06-12 05:53:59.153866] [159353114489651200] [INVROLES]: Found invite roles: ['Space Pilot'] and roles were added
+[2023-06-12 05:54:20.450419] [159353114489651200] [INVROLES]: User mOmO[702377648072032286] joined with invite fhn3Qz4 named Space Pilot
+[2023-06-12 05:54:21.009929] [159353114489651200] [INVROLES]: Found invite roles: ['Space Pilot'] and roles were added

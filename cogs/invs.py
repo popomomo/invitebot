@@ -183,15 +183,11 @@ class Invs(commands.Cog):
                         if config["Invites"][f"{invite.code}"]["welcome"] != "None":
                             recipient = self.client.get_user(member.id)
                             embed = discord.Embed(title = "**Invitebot**", description = config["Invites"][f"{invite.code}"]["welcome"], timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-                            embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-                            embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
                             await recipient.send(embed = embed)
 
                         elif config["General"]["WelcomeMessage"] != "None":
                             recipient = self.client.get_user(member.id)
                             embed = discord.Embed(title = "**Invitebot**", description = config["General"]["WelcomeMessage"], timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-                            embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-                            embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
                             await recipient.send(embed = embed)
                         found_code = invite.code
                         break
@@ -203,15 +199,11 @@ class Invs(commands.Cog):
                         if config["Invites"][f"{invite.code}"]["welcome"] != "None":
                             recipient = self.client.get_user(member.id)
                             embed = discord.Embed(title = "**Invitebot**", description = config["Invites"][f"{invite.code}"]["welcome"], timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-                            embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-                            embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
                             await recipient.send(embed = embed)
 
                         elif config["General"]["WelcomeMessage"] != "None":
                             recipient = self.client.get_user(member.id)
                             embed = discord.Embed(title = "**Invitebot**", description = config["General"]["WelcomeMessage"], timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-                            embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-                            embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
                             await recipient.send(embed = embed)
                         found_code = invite.code
                         break
@@ -247,15 +239,11 @@ class Invs(commands.Cog):
                         if config["Invites"][f"{invite}"]["welcome"] != "None":
                             recipient = self.client.get_user(member.id)
                             embed = discord.Embed(title = "**Invitebot**", description = config["Invites"][f"{invite}"]["welcome"], timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-                            embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-                            embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
                             await recipient.send(embed = embed)
 
                         elif config["General"]["WelcomeMessage"] != "None":
                             recipient = self.client.get_user(member.id)
                             embed = discord.Embed(title = "**Invitebot**", description = config["General"]["WelcomeMessage"], timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-                            embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-                            embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
                             await recipient.send(embed = embed)
 
                     else:
@@ -265,15 +253,11 @@ class Invs(commands.Cog):
                         if config["Invites"][f"{invite}"]["welcome"] != "None":
                             recipient = self.client.get_user(member.id)
                             embed = discord.Embed(title = "**Invitebot**", description = config["Invites"][f"{invite}"]["welcome"], timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-                            embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-                            embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
                             await recipient.send(embed = embed)
 
                         elif config["General"]["WelcomeMessage"] != "None":
                             recipient = self.client.get_user(member.id)
                             embed = discord.Embed(title = "**Invitebot**", description = config["General"]["WelcomeMessage"], timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-                            embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-                            embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
                             await recipient.send(embed = embed)
                     found_code = invite
                     break
@@ -555,7 +539,6 @@ class Invs(commands.Cog):
 
         embed = discord.Embed(title = "**Invite List**", timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
         embed.set_thumbnail(url = ctx.guild.icon_url_as(format = "png"))
-        embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
 
         for inv in config["Invites"]:
             if "1use" in config["Invites"][f"{inv}"]["tags"]:
@@ -886,8 +869,6 @@ class Invs(commands.Cog):
 
     def constructResponseEmbedBase(self, desc):
         embed = discord.Embed(title = "**Invitebot**", description = desc, timestamp = datetime.datetime.utcnow(), color = discord.Colour.from_rgb(119, 137, 218))
-        embed.set_thumbnail(url = "https://invitebot.xyz/icons/invitebot-logo.png")
-        embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
         return embed
 
     async def serverLog(self, guild_id, log_type, log_msg):
@@ -905,7 +886,6 @@ class Invs(commands.Cog):
             em_color = discord.Colour.from_rgb(240, 71, 71)
 
         embed = discord.Embed(title = "**Invitebot Logging**", color = em_color)
-        embed.set_footer(text = "Support Server - https://invitebot.xyz/support \nInvitebot made with \u2764\ufe0f by Nevalicjus")
 
         if log_type == "inv_created":
             embed.add_field(name = "Invite Created", value = log_msg, inline = False)
